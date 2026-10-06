@@ -1,6 +1,7 @@
 [
  {
   "id": "si-0001",
+  "date": "2026-10-06",
   "status": "scheduled",
   "category": "Trail running",
   "type": "judgment",
@@ -30,7 +31,6 @@
   "realityCheck": "If you can hear thunder, you're within striking distance. An exposed ridge is the worst place to be when it arrives.",
   "headline": "Clear sky. Distant thunder.",
   "caption": "Blue sky above, thunder somewhere behind you.\n\nComment SEND or BAIL.",
-  "date": "2026-10-06",
   "hashtags": [
    "#hiking",
    "#outdoors",
@@ -41,6 +41,7 @@
  },
  {
   "id": "si-0002",
+  "date": null,
   "status": "approved",
   "category": "Hiking",
   "type": "judgment",
@@ -70,11 +71,11 @@
   },
   "realityCheck": "Descents in the dark run far slower than you plan for, and 15% won't last.",
   "headline": "60 minutes of light. 15% battery.",
-  "caption": "Summit is right there. So is sunset. Comment SEND or BAIL.",
-  "date": null
+  "caption": "Summit is right there. So is sunset. Comment SEND or BAIL."
  },
  {
   "id": "si-0003",
+  "date": "2026-10-07",
   "status": "scheduled",
   "category": "Trail running",
   "type": "gear",
@@ -101,7 +102,6 @@
   },
   "headline": "34 degrees. Calf-deep creek.",
   "caption": "9 miles left either way.\n\nComment ON or OFF.",
-  "date": "2026-10-07",
   "hashtags": [
    "#hiking",
    "#outdoors",
@@ -112,6 +112,7 @@
  },
  {
   "id": "si-0005",
+  "date": null,
   "status": "approved",
   "category": "Climbing",
   "type": "judgment",
@@ -137,11 +138,11 @@
   },
   "realityCheck": "Friction drops a lot on wet rock. Know your retreat before you need it.",
   "headline": "40 feet. Wet rock.",
-  "caption": "So close. So slick. Comment SEND or BAIL.",
-  "date": null
+  "caption": "So close. So slick. Comment SEND or BAIL."
  },
  {
   "id": "si-0006",
+  "date": "2026-10-09",
   "status": "scheduled",
   "category": "Skiing",
   "type": "judgment",
@@ -168,7 +169,6 @@
   "realityCheck": "Tracks don't mean a slope is stable, and many avalanche accidents happen at Considerable.",
   "headline": "Fresh tracks. Considerable danger.",
   "caption": "Someone else already skied it.\n\nComment SEND or BAIL.",
-  "date": "2026-10-09",
   "hashtags": [
    "#outdoors",
    "#mountains",
@@ -179,6 +179,7 @@
  },
  {
   "id": "si-0007",
+  "date": null,
   "status": "approved",
   "category": "Mountain biking",
   "type": "judgment",
@@ -201,11 +202,11 @@
    ]
   },
   "headline": "Can't see the landing.",
-  "caption": "Everyone else made it. Probably. Comment SEND or WALK.",
-  "date": null
+  "caption": "Everyone else made it. Probably. Comment SEND or WALK."
  },
  {
   "id": "si-0008",
+  "date": "2026-10-08",
   "status": "scheduled",
   "category": "Navigation",
   "type": "route",
@@ -231,7 +232,6 @@
   },
   "headline": "The GPS and the sign disagree.",
   "caption": "One of them is wrong.\n\nComment GPS or SIGN.",
-  "date": "2026-10-08",
   "hashtags": [
    "#hiking",
    "#outdoors",
@@ -242,6 +242,7 @@
  },
  {
   "id": "si-0009",
+  "date": null,
   "status": "approved",
   "category": "Trail running",
   "type": "pace",
@@ -267,11 +268,11 @@
    "goalLabel": "Extra loop"
   },
   "headline": "\"Let's add the extra loop.\"",
-  "caption": "There's always one. Comment SEND or NOT.",
-  "date": null
+  "caption": "There's always one. Comment SEND or NOT."
  },
  {
   "id": "si-0010",
+  "date": "2026-10-11",
   "status": "scheduled",
   "category": "Endurance",
   "type": "judgment",
@@ -299,7 +300,6 @@
   },
   "headline": "5 miles. 55 minutes.",
   "caption": "Chase the cutoff or call it?\n\nComment SEND or BAIL.",
-  "date": "2026-10-11",
   "hashtags": [
    "#outdoors",
    "#getoutside",
@@ -310,6 +310,7 @@
  },
  {
   "id": "si-0013",
+  "date": null,
   "status": "approved",
   "category": "Hiking",
   "type": "judgment",
@@ -336,11 +337,11 @@
   },
   "realityCheck": "Waterborne illness is real but usually delayed and treatable. Serious dehydration in heat is the more immediate risk. A backup tablet fixes all of this.",
   "headline": "Half a liter. 6 miles. 80 degrees.",
-  "caption": "Thirsty math. Comment DRINK or HOLD.",
-  "date": null
+  "caption": "Thirsty math. Comment DRINK or HOLD."
  },
  {
   "id": "si-0014",
+  "date": null,
   "status": "approved",
   "category": "Trail running",
   "type": "judgment",
@@ -366,11 +367,11 @@
   },
   "realityCheck": "In a whiteout, your own tracks are often the best way home.",
   "headline": "Half a mile. Tracks disappearing.",
-  "caption": "Tag the summit or follow your tracks? Comment SEND or BAIL.",
-  "date": null
+  "caption": "Tag the summit or follow your tracks? Comment SEND or BAIL."
  },
  {
   "id": "si-0015",
+  "date": "2026-10-10",
   "status": "scheduled",
   "category": "Hiking",
   "type": "route",
@@ -396,7 +397,6 @@
   },
   "headline": "2 miles of switchbacks. Or 0.4 of scree.",
   "caption": "Your knees have opinions.\n\nComment SCREE or TRAIL.",
-  "date": "2026-10-10",
   "hashtags": [
    "#hiking",
    "#outdoors",
@@ -407,6 +407,7 @@
  },
  {
   "id": "si-0016",
+  "date": "2026-10-12",
   "status": "scheduled",
   "category": "Trail running",
   "type": "gear",
@@ -432,7 +433,6 @@
   "realityCheck": "A slip on firm snow picks up speed fast, and the runout is what decides how it ends. Without traction, the detour is the honest call.",
   "headline": "200 feet of firm snow. No spikes.",
   "caption": "45 minutes or one committed shuffle.\n\nComment CROSS or AROUND.",
-  "date": "2026-10-12",
   "hashtags": [
    "#hiking",
    "#outdoors",
@@ -443,6 +443,7 @@
  },
  {
   "id": "si-0017",
+  "date": null,
   "status": "approved",
   "category": "Backpacking",
   "type": "judgment",
@@ -469,7 +470,537 @@
    "goalLabel": "Planned camp"
   },
   "headline": "4 more miles. Or right here.",
-  "caption": "Tomorrow-you is watching. Comment PUSH or STOP.",
-  "date": null
+  "caption": "Tomorrow-you is watching. Comment PUSH or STOP."
+ },
+ {
+  "id": "si-0018",
+  "date": "2026-10-13",
+  "status": "scheduled",
+  "category": "Hiking",
+  "type": "judgment",
+  "scenario": [
+   "The col is 700 ft above you. Wind just picked up hard.",
+   "Your partner's hands are already numb. Car is 3 miles back."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 1757,
+   "milesOut": 3,
+   "milesToGoal": 0.6,
+   "gainFt": 700,
+   "hazards": [
+    "whiteout"
+   ],
+   "window": "40 mph gusts",
+   "goalLabel": "The col"
+  },
+  "realityCheck": "Wind strips heat faster than cold air alone, and numb hands are an early sign, not a late one. Turning around is a decision you can make while you can still make decisions.",
+  "headline": "700 feet. Numb hands.",
+  "caption": "The col is right there. So is the wind.\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#hiking",
+   "#outdoors",
+   "#mountains",
+   "#hikingadventures",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0019",
+  "date": "2026-10-14",
+  "status": "scheduled",
+  "category": "Mountain biking",
+  "type": "route",
+  "scenario": [
+   "Fork in the singletrack. Left is the blue you know.",
+   "Right is a new black with a sign that says \"Expert. No bailouts.\""
+  ],
+  "choiceA": {
+   "label": "GO BLACK",
+   "keyword": "BLACK"
+  },
+  "choiceB": {
+   "label": "STAY BLUE",
+   "keyword": "BLUE"
+  },
+  "map": {
+   "seed": 6810,
+   "milesToGoal": 2,
+   "hazards": [
+    "blind_drop"
+   ],
+   "goalLabel": "Trailhead"
+  },
+  "headline": "Blue you know. Black you don't.",
+  "caption": "The sign is doing a lot of work.\n\nComment BLACK or BLUE.",
+  "hashtags": [
+   "#outdoors",
+   "#mountainbiking",
+   "#mtb",
+   "#getoutside",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0020",
+  "date": "2026-10-15",
+  "status": "scheduled",
+  "category": "Trail running",
+  "type": "judgment",
+  "scenario": [
+   "Mile 9 of a 14 mile loop. Headlamp is in the car.",
+   "Sunset is in 50 minutes and the back half is slower."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 6143,
+   "milesOut": 9,
+   "milesToGoal": 5,
+   "hazards": [
+    "sunset"
+   ],
+   "window": "50 min",
+   "goalLabel": "Finish loop"
+  },
+  "headline": "5 miles. 50 minutes of light.",
+  "caption": "Finish the loop or cut back the way you came?\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#trailrunning",
+   "#outdoors",
+   "#hiking",
+   "#getoutside",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0021",
+  "date": "2026-10-16",
+  "status": "scheduled",
+  "category": "Backpacking",
+  "type": "gear",
+  "scenario": [
+   "Forecast says 28°F tonight. Your sleeping bag is rated to 40.",
+   "Trailhead is 6 miles back. Camp is 2 miles ahead."
+  ],
+  "choiceA": {
+   "label": "PUSH TO CAMP",
+   "keyword": "CAMP"
+  },
+  "choiceB": {
+   "label": "HIKE OUT",
+   "keyword": "OUT"
+  },
+  "map": {
+   "seed": 9367,
+   "milesOut": 6,
+   "milesToGoal": 2,
+   "hazards": [
+    "sunset"
+   ],
+   "window": "28°F tonight",
+   "goalLabel": "Camp"
+  },
+  "realityCheck": "A 40 degree bag at 28 degrees is a long night, not an emergency, if you have dry layers and a decent pad. Without them, it can become one.",
+  "headline": "28 degrees. A 40 degree bag.",
+  "caption": "Every layer you own, or every mile back to the car.\n\nComment CAMP or OUT.",
+  "hashtags": [
+   "#backpacking",
+   "#outdoors",
+   "#hiking",
+   "#mountains",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0022",
+  "date": "2026-10-17",
+  "status": "scheduled",
+  "category": "Climbing",
+  "type": "judgment",
+  "scenario": [
+   "Two pitches up a four pitch route. Clouds building fast.",
+   "The last two are the easiest. Rapping now means leaving gear."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 1058,
+   "gainFt": 300,
+   "hazards": [
+    "storm"
+   ],
+   "window": "clouds building",
+   "goalLabel": "Top out"
+  },
+  "realityCheck": "Easy pitches still take time, and a wet rappel is harder than a dry one. Gear is cheaper than the alternative.",
+  "headline": "Two pitches left. Clouds building.",
+  "caption": "Easy climbing ahead. Weather behind.\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#climbing",
+   "#outdoors",
+   "#mountains",
+   "#rockclimbing",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0023",
+  "date": "2026-10-18",
+  "status": "scheduled",
+  "category": "Navigation",
+  "type": "route",
+  "scenario": [
+   "Fog came in. The cairns stop here.",
+   "Your map says the trail bends left along the cliff edge. Your gut says right, through the boulders."
+  ],
+  "choiceA": {
+   "label": "TRUST MAP",
+   "keyword": "MAP"
+  },
+  "choiceB": {
+   "label": "TRUST GUT",
+   "keyword": "GUT"
+  },
+  "map": {
+   "seed": 7200,
+   "milesToGoal": 1.5,
+   "hazards": [
+    "whiteout"
+   ],
+   "window": "fog",
+   "goalLabel": "Pass"
+  },
+  "realityCheck": "In fog, a map and compass beat instinct nearly every time. Cliff edges are exactly where people's guts get it wrong.",
+  "headline": "Fog. The cairns stop here.",
+  "caption": "Map says one thing. Gut says another.\n\nComment MAP or GUT.",
+  "hashtags": [
+   "#hiking",
+   "#outdoors",
+   "#backcountry",
+   "#navigation",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0024",
+  "date": "2026-10-19",
+  "status": "scheduled",
+  "category": "Endurance",
+  "type": "pace",
+  "scenario": [
+   "Mile 18 of a 26 mile trail race. You're on pace for a PR.",
+   "Your running partner is cramping badly and asks you to stay."
+  ],
+  "choiceA": {
+   "label": "STAY WITH THEM",
+   "keyword": "STAY"
+  },
+  "choiceB": {
+   "label": "GO FOR IT",
+   "keyword": "GO"
+  },
+  "map": {
+   "seed": 2572,
+   "milesOut": 18,
+   "milesToGoal": 8,
+   "hazards": [
+    "cutoff"
+   ],
+   "window": "PR pace",
+   "goalLabel": "Finish"
+  },
+  "headline": "PR pace. Partner cramping.",
+  "caption": "Eight miles to decide what kind of runner you are.\n\nComment STAY or GO.",
+  "hashtags": [
+   "#trailrunning",
+   "#outdoors",
+   "#ultrarunning",
+   "#getoutside",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0025",
+  "date": "2026-10-20",
+  "status": "scheduled",
+  "category": "Paddling",
+  "type": "judgment",
+  "scenario": [
+   "Lake crossing, 1 mile of open water to the takeout.",
+   "Whitecaps just started. Hugging the shore adds 4 miles."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 1257,
+   "milesToGoal": 1,
+   "hazards": [
+    "creek"
+   ],
+   "window": "whitecaps",
+   "goalLabel": "Takeout"
+  },
+  "realityCheck": "Cold water and wind build faster than they look from shore, and a swim a half mile out is a different problem than a swim near it. The long way is the paddle you'll remember fondly.",
+  "headline": "1 mile of open water. Whitecaps.",
+  "caption": "Straight across or hug the shore?\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#paddling",
+   "#outdoors",
+   "#kayaking",
+   "#getoutside",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0026",
+  "date": "2026-10-21",
+  "status": "scheduled",
+  "category": "Hiking",
+  "type": "gear",
+  "scenario": [
+   "Trail climbs into a cold rain. Your shell is in the car, 2 miles back.",
+   "Summit is 1.5 miles and 1,100 ft ahead. You have a fleece."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 5445,
+   "milesOut": 2,
+   "milesToGoal": 1.5,
+   "gainFt": 1100,
+   "hazards": [
+    "storm"
+   ],
+   "window": "cold rain",
+   "goalLabel": "Summit"
+  },
+  "realityCheck": "Wet fleece at altitude in wind is how most hypothermia cases start, and they start in the 40s, not below freezing.",
+  "headline": "Cold rain. No shell.",
+  "caption": "A fleece and some optimism.\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#hiking",
+   "#outdoors",
+   "#mountains",
+   "#hikingadventures",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0027",
+  "date": "2026-10-22",
+  "status": "scheduled",
+  "category": "Scrambling",
+  "type": "route",
+  "scenario": [
+   "The ridge narrows to a knife edge for 200 ft. Exposure on both sides.",
+   "A ledge system below looks like it bypasses it. Looks like."
+  ],
+  "choiceA": {
+   "label": "TAKE THE RIDGE",
+   "keyword": "RIDGE"
+  },
+  "choiceB": {
+   "label": "TAKE THE LEDGE",
+   "keyword": "LEDGE"
+  },
+  "map": {
+   "seed": 2332,
+   "gainFt": 150,
+   "hazards": [
+    "blind_drop"
+   ],
+   "goalLabel": "Summit"
+  },
+  "headline": "Knife edge. Or the ledge.",
+  "caption": "Known exposure or unknown bypass?\n\nComment RIDGE or LEDGE.",
+  "hashtags": [
+   "#hiking",
+   "#outdoors",
+   "#mountains",
+   "#scrambling",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0028",
+  "date": "2026-10-23",
+  "status": "scheduled",
+  "category": "Skiing",
+  "type": "judgment",
+  "scenario": [
+   "First storm of the season. 10 inches on bare rock and grass.",
+   "Your favorite early line is in. So are the stumps under it."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 7662,
+   "hazards": [
+    "snowfield"
+   ],
+   "window": "10 in on rock",
+   "goalLabel": "Your line"
+  },
+  "realityCheck": "Early season snow hides what it doesn't cover. Most October ski injuries are impacts, not avalanches.",
+  "headline": "First storm. 10 inches on rock.",
+  "caption": "The line is in. So is everything under it.\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#skiing",
+   "#outdoors",
+   "#mountains",
+   "#backcountryskiing",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0029",
+  "date": "2026-10-24",
+  "status": "scheduled",
+  "category": "Trail running",
+  "type": "gear",
+  "scenario": [
+   "Mile 2 of 10. Your shoe just blew out at the toe.",
+   "Car is right there. You have duct tape and a sock."
+  ],
+  "choiceA": {
+   "label": "TAPE IT",
+   "keyword": "TAPE"
+  },
+  "choiceB": {
+   "label": "CALL IT",
+   "keyword": "CALL"
+  },
+  "map": {
+   "seed": 7815,
+   "milesOut": 2,
+   "milesToGoal": 8,
+   "hazards": [
+    "none"
+   ],
+   "goalLabel": "Finish"
+  },
+  "headline": "Blown shoe. Mile 2. Duct tape.",
+  "caption": "Eight more miles on tape and faith.\n\nComment TAPE or CALL.",
+  "hashtags": [
+   "#trailrunning",
+   "#outdoors",
+   "#hiking",
+   "#getoutside",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0030",
+  "date": "2026-10-25",
+  "status": "scheduled",
+  "category": "Backpacking",
+  "type": "judgment",
+  "scenario": [
+   "Creek crossing, thigh deep, moving fast after yesterday's rain.",
+   "Camp is on the other side. Upstream is a bridge, 3 miles round trip."
+  ],
+  "choiceA": {
+   "label": "CROSS HERE",
+   "keyword": "CROSS"
+  },
+  "choiceB": {
+   "label": "TAKE THE BRIDGE",
+   "keyword": "BRIDGE"
+  },
+  "map": {
+   "seed": 9348,
+   "milesToGoal": 0.2,
+   "hazards": [
+    "creek"
+   ],
+   "window": "thigh deep, fast",
+   "goalLabel": "Camp"
+  },
+  "realityCheck": "Thigh deep and fast is where crossings go wrong. Water pushes much harder than it looks, and a pack makes it worse. Three miles is cheap.",
+  "headline": "Thigh deep. Moving fast.",
+  "caption": "Camp is 60 feet away. Across that.\n\nComment CROSS or BRIDGE.",
+  "hashtags": [
+   "#backpacking",
+   "#outdoors",
+   "#hiking",
+   "#backcountry",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0031",
+  "date": "2026-10-26",
+  "status": "scheduled",
+  "category": "Hiking",
+  "type": "judgment",
+  "scenario": [
+   "Summit is 0.3 miles away. You've been moving for 9 hours.",
+   "Last bus from the trailhead leaves in 2 hours. It's 4 miles down."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 6764,
+   "milesOut": 9,
+   "milesToGoal": 0.3,
+   "hazards": [
+    "cutoff"
+   ],
+   "window": "bus in 2 hrs",
+   "goalLabel": "Summit"
+  },
+  "headline": "0.3 miles up. Last bus in 2 hours.",
+  "caption": "Twenty minutes to the top. Maybe.\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#hiking",
+   "#outdoors",
+   "#mountains",
+   "#hikingadventures",
+   "#sendorbail"
+  ]
  }
 ]

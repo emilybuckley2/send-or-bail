@@ -12,14 +12,16 @@ export REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell-1194/chrome-lin
 npm run validate && npm test
 ```
 
-## Weekly run (the routine does this every Sunday)
+## Monthly run (the routine does this on the 26th)
 
 1. Read `data/questions.json`. Note the last scheduled date and every existing headline and scenario.
-2. Write 7 new scenarios to `data/candidates/<first-date>.json` following the editorial rules below.
+2. Count the days from the day after the last scheduled date through the 28th of next month, and
+   write that many new scenarios (usually 31 to 33) to `data/candidates/<first-date>.json`
+   following the editorial rules below.
    Fields per candidate: `category, type, scenario, choiceA, choiceB, map (hazards, optional
    milesOut/milesToGoal/gainFt/window/goalLabel), headline, caption, hashtags, realityCheck?`.
    Leave out `id`, `date`, `status`, `seed`; `plan-week` assigns them.
-3. `npm run cli -- plan-week data/candidates/<first-date>.json` validates, assigns the next 7 dates,
+3. `npm run cli -- plan-batch data/candidates/<first-date>.json` validates, assigns consecutive dates,
    renders each Reel and stages `media/<date>/`. Fix any lint error it reports and rerun.
 4. Commit everything (questions.json, candidates, media) and push. Media links are pinned to the
    commit SHA, so commit before scheduling.
@@ -29,7 +31,7 @@ npm run validate && npm test
    `mode: customScheduled`, `schedulingType: automatic`, `shouldShareToFeed: true`, no first comment.
    Confirm each returned status is `scheduled`, then record the Buffer post ids in `data/posts.json`,
    commit and push.
-6. Finish with a short summary: the 7 headlines, dates, and anything that needs Emily's attention.
+6. Finish with a short summary: every headline with its date, and anything that needs Emily's attention.
 
 Posts go out at 7:30am ET. Never post results, never set a first comment, never auto-publish to any
 channel other than `sendorbail`.
@@ -46,9 +48,11 @@ channel other than `sendorbail`.
 - Fictional and stylized. No real peaks, trails, parks, brands or people.
 - Tone: outdoorsy, smart, slightly irreverent, gender neutral, credible to people who go outside.
   Never mock a group of people. Humor lives in the situation, not in joke formats.
-- Mix per week: at least 3 judgment, 1 route, 1 gear, at most 1 pace, and 4 or more categories
-  (Trail running, Hiking, Backpacking, Climbing, Skiing, Mountain biking, Navigation, Endurance,
-  Paddling, Scrambling). Spread hazards; don't repeat last week's setups.
+- Mix per month: roughly half judgment, the rest split between route and gear, pace calls at most
+  one in eight, and 6 or more categories (Trail running, Hiking, Backpacking, Climbing, Skiing,
+  Mountain biking, Navigation, Endurance, Paddling, Scrambling). Spread hazards across the month,
+  never the same hazard two days running, and don't repeat any earlier setup. Match the season
+  (snow and short days in winter, heat and storms in summer).
 - Headline: short, punchy, fits two lines at 100px (under 36 characters). Caption: one short line,
   blank line, then exactly `Comment KEYWORD_A or KEYWORD_B.` Nothing after it.
 - Hashtags: exactly 5, lowercase, broad hiking and outdoors first (`#hiking #outdoors #mountains

@@ -42,12 +42,12 @@ function schedule(from: string) {
   console.log(`${posts.length} posts -> ${file}`);
 }
 
-// plan-week <candidates.json>: validates 7 new scenarios, assigns ids and the next 7 dates,
-// appends them to questions.json as scheduled, renders them, and stages media/<date>/.
-async function planWeek(file: string) {
+// plan-batch <candidates.json>: validates new scenarios, assigns ids and consecutive dates after the
+// last scheduled one, appends them to questions.json as scheduled, renders them, stages media/<date>/.
+async function planBatch(file: string) {
   const all = load();
   const raw = JSON.parse(fs.readFileSync(file, "utf8")) as Partial<Question>[];
-  if (raw.length !== 7) throw new Error(`need exactly 7 candidates, got ${raw.length}`);
+  if (raw.length < 1 || raw.length > 40) throw new Error(`need 1 to 40 candidates, got ${raw.length}`);
   let nextNum = Math.max(...all.map((q) => Number(q.id.slice(3)))) + 1;
   let date = all.filter((q) => q.date).map((q) => q.date!).sort().at(-1) ?? new Date().toISOString().slice(0, 10);
   const seen = new Set(all.map((q) => q.headline.toLowerCase()));
@@ -122,7 +122,7 @@ const [cmd, arg, ...rest] = process.argv.slice(2);
 const commands: Record<string, () => Promise<void>> = {
   render: () => render(arg ?? "week1"),
   schedule: async () => schedule(arg ?? new Date().toISOString().slice(0, 10)),
-  "plan-week": () => planWeek(arg),
+  "plan-batch": () => planBatch(arg),
   tally: async () => runTally(arg, rest),
   "render-results": () => runRenderResults(arg),
 };
