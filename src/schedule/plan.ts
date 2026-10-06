@@ -1,7 +1,10 @@
 import type { Question, Result } from "../schema";
 
+import { execFileSync } from "node:child_process";
+
 export const REPO_RAW = "https://raw.githubusercontent.com/emilybuckley2/send-or-bail";
-export const MEDIA_BRANCH = "claude/compassionate-hopper-xzvr52";
+// Media links are pinned to a commit, so they keep working whatever branch a week was made on.
+export const mediaRef = (): string => process.env.MEDIA_REF ?? execFileSync("git", ["rev-parse", "HEAD"]).toString().trim();
 export const POST_TIME = { prevote: "07:30", results: "18:30" };
 export const TIMEZONE = "America/New_York";
 
@@ -36,7 +39,7 @@ export function planPrevote(q: Question, time = POST_TIME.prevote): PlannedPost 
     dueAt: `${q.date}T${time}:00${etOffset(q.date, time)}`,
     text: postText(q),
     // No first comment: a pinned reality check reads as the answer and kills the vote.
-    videoUrl: `${REPO_RAW}/${MEDIA_BRANCH}/media/${q.date}/prevote.mp4`,
+    videoUrl: `${REPO_RAW}/${mediaRef()}/media/${q.date}/prevote.mp4`,
     thumbnailOffsetMs: 8500, // fork + CTA fully on screen
   };
 }
@@ -64,7 +67,7 @@ export function planResults(q: Question, r: Result): PlannedPost {
     dueAt: `${date}T${POST_TIME.results}:00${etOffset(date, POST_TIME.results)}`,
     text: q.hashtags?.length ? `${caption}\n\n${q.hashtags.join(" ")}` : caption,
     firstComment: q.realityCheck,
-    videoUrl: `${REPO_RAW}/${MEDIA_BRANCH}/media/${date}/results.mp4`,
+    videoUrl: `${REPO_RAW}/${mediaRef()}/media/${date}/results.mp4`,
     thumbnailOffsetMs: 6000,
   };
 }

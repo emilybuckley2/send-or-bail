@@ -42,6 +42,36 @@ function schedule(from: string) {
   console.log(`${posts.length} posts -> ${file}`);
 }
 
+// plan-week <candidates.json>: validates 7 new scenarios, assigns ids and the next 7 dates,
+// appends them to questions.json as scheduled, renders them, and stages media/<date>/.
+async function planWeek(file: string) {
+  const all = load();
+  const raw = JSON.parse(fs.readFileSync(file, "utf8")) as Partial<Question>[];
+  if (raw.length !== 7) throw new Error(`need exactly 7 candidates, got ${raw.length}`);
+  let nextNum = Math.max(...all.map((q) => Number(q.id.slice(3)))) + 1;
+  let date = all.filter((q) => q.date).map((q) => q.date!).sort().at(-1) ?? new Date().toISOString().slice(0, 10);
+  const seen = new Set(all.map((q) => q.headline.toLowerCase()));
+  const added: Question[] = [];
+  for (const c of raw) {
+    date = nextDay(date);
+    const q = Question.parse({ ...c, id: `si-${String(nextNum++).padStart(4, "0")}`, date, status: "scheduled",
+      map: { ...c.map, seed: c.map?.seed ?? Math.floor(Math.random() * 9000) + 1000 } });
+    const errors = lintQuestion(q);
+    if (seen.has(q.headline.toLowerCase())) errors.push(`${q.id}: headline repeats an existing question`);
+    if (errors.length) throw new Error(errors.join("\n"));
+    added.push(q);
+  }
+  fs.writeFileSync(QUESTIONS, JSON.stringify([...all, ...added], null, 1) + "\n");
+  console.log(`added ${added.map((q) => `${q.id} (${q.date})`).join(", ")}`);
+  let previous: string | undefined;
+  for (const q of added) {
+    previous = await renderQuestion(q, `out/${q.date}`, previous);
+    fs.mkdirSync(`media/${q.date}`, { recursive: true });
+    for (const f of ["prevote.mp4", "cover.png"]) fs.copyFileSync(`out/${q.date}/${f}`, `media/${q.date}/${f}`);
+    console.log(`${q.id} rendered -> media/${q.date}`);
+  }
+}
+
 function getQuestion(id: string): Question {
   const q = load().find((x) => x.id === id);
   if (!q) throw new Error(`no question ${id}`);
@@ -92,6 +122,7 @@ const [cmd, arg, ...rest] = process.argv.slice(2);
 const commands: Record<string, () => Promise<void>> = {
   render: () => render(arg ?? "week1"),
   schedule: async () => schedule(arg ?? new Date().toISOString().slice(0, 10)),
+  "plan-week": () => planWeek(arg),
   tally: async () => runTally(arg, rest),
   "render-results": () => runRenderResults(arg),
 };
