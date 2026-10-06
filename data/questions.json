@@ -46,8 +46,8 @@
    "keyword": "SEND"
   },
   "choiceB": {
-   "label": "TURN AROUND",
-   "keyword": "TURN"
+   "label": "BAIL",
+   "keyword": "BAIL"
   },
   "map": {
    "seed": 8830,
@@ -63,7 +63,7 @@
   },
   "realityCheck": "Descents in the dark run far slower than you plan for, and 15% won't last.",
   "headline": "60 minutes of light. 15% battery.",
-  "caption": "Summit's right there. So is sunset. Comment SEND or TURN.",
+  "caption": "Summit is right there. So is sunset. Comment SEND or BAIL.",
   "date": null
  },
  {
@@ -110,8 +110,8 @@
    "keyword": "SEND"
   },
   "choiceB": {
-   "label": "RAP OFF",
-   "keyword": "RAP"
+   "label": "BAIL",
+   "keyword": "BAIL"
   },
   "map": {
    "seed": 7062,
@@ -123,7 +123,7 @@
   },
   "realityCheck": "Friction drops a lot on wet rock. Know your retreat before you need it.",
   "headline": "40 feet. Wet rock.",
-  "caption": "So close. So slick. Comment SEND or RAP.",
+  "caption": "So close. So slick. Comment SEND or BAIL.",
   "date": null
  },
  {
@@ -140,8 +140,8 @@
    "keyword": "SEND"
   },
   "choiceB": {
-   "label": "OTHER LINE",
-   "keyword": "OTHER"
+   "label": "BAIL",
+   "keyword": "BAIL"
   },
   "map": {
    "seed": 9933,
@@ -153,7 +153,7 @@
   },
   "realityCheck": "Tracks don't mean a slope is stable, and many avalanche accidents happen at Considerable.",
   "headline": "Fresh tracks. Considerable danger.",
-  "caption": "Someone else already skied it. Comment SEND or OTHER.",
+  "caption": "Someone else already skied it. Comment SEND or BAIL.",
   "date": null
  },
  {
@@ -256,8 +256,8 @@
    "keyword": "SEND"
   },
   "choiceB": {
-   "label": "DROP",
-   "keyword": "DROP"
+   "label": "BAIL",
+   "keyword": "BAIL"
   },
   "map": {
    "seed": 2756,
@@ -270,7 +270,7 @@
    "goalLabel": "Aid station"
   },
   "headline": "5 miles. 55 minutes.",
-  "caption": "Chase the cutoff or call it? Comment SEND or DROP.",
+  "caption": "Chase the cutoff or call it? Comment SEND or BAIL.",
   "date": null
  },
  {
@@ -318,8 +318,8 @@
    "keyword": "SEND"
   },
   "choiceB": {
-   "label": "TURN AROUND",
-   "keyword": "TURN"
+   "label": "BAIL",
+   "keyword": "BAIL"
   },
   "map": {
    "seed": 3021,
@@ -331,7 +331,7 @@
   },
   "realityCheck": "In a whiteout, your own tracks are often the best way home.",
   "headline": "Half a mile. Tracks disappearing.",
-  "caption": "Tag the summit or follow your tracks? Comment SEND or TURN.",
+  "caption": "Tag the summit or follow your tracks? Comment SEND or BAIL.",
   "date": null
  },
  {

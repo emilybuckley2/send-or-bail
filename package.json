@@ -6,7 +6,10 @@
   "scripts": {
     "studio": "remotion studio src/render/index.ts",
     "sample": "tsx src/scripts/sample.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "validate": "tsx src/scripts/validate.ts",
+    "music": "tsx src/music/synth.ts",
+    "cli": "tsx src/cli.ts"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "^5.3.0",

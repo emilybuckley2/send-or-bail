@@ -26,7 +26,7 @@ export const Handle: React.FC = () => (
   </div>
 );
 
-const Profile: React.FC<{ seed: number; gainFt: number; x: number; y: number; w: number; h: number }> = ({ seed, gainFt, x, y, w, h }) => {
+export const Profile: React.FC<{ seed: number; gainFt: number; x: number; y: number; w: number; h: number }> = ({ seed, gainFt, x, y, w, h }) => {
   const p = profile(seed);
   const pts = p.map((v, i) => `${x + (i / (p.length - 1)) * w},${y + h - v * h}`);
   return (

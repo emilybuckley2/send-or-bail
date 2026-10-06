@@ -1,0 +1,35 @@
+[
+  {
+    "id": "trailhead",
+    "file": "trailhead.mp3",
+    "title": "Trailhead",
+    "artist": "Send or Bail? (generated in code)",
+    "source": "generated",
+    "licenseRef": "original-generated-src/music/synth.ts",
+    "bpm": 112,
+    "mood": "bright",
+    "startSec": 0
+  },
+  {
+    "id": "switchback",
+    "file": "switchback.mp3",
+    "title": "Switchback",
+    "artist": "Send or Bail? (generated in code)",
+    "source": "generated",
+    "licenseRef": "original-generated-src/music/synth.ts",
+    "bpm": 120,
+    "mood": "driving",
+    "startSec": 0
+  },
+  {
+    "id": "ridgeline",
+    "file": "ridgeline.mp3",
+    "title": "Ridgeline",
+    "artist": "Send or Bail? (generated in code)",
+    "source": "generated",
+    "licenseRef": "original-generated-src/music/synth.ts",
+    "bpm": 104,
+    "mood": "easy",
+    "startSec": 0
+  }
+]
