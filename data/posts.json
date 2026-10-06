@@ -3,126 +3,441 @@
   "questionId": "si-0001",
   "kind": "prevote",
   "date": "2026-10-06",
-  "bufferPostId": "6ac511f20c0a17c2690d154f"
+  "bufferPostId": "6ac511f20c0a17c2690d154f",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0001",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-06",
+  "bufferPostId": "6ac51dabd2669b6154b9b74e"
+ },
+ {
+  "questionId": "si-0001",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-06",
+  "bufferPostId": "6ac51dbaec5da1bfe835d923"
  },
  {
   "questionId": "si-0003",
   "kind": "prevote",
   "date": "2026-10-07",
-  "bufferPostId": "6ac512100c0a17c2690d17ba"
+  "bufferPostId": "6ac512100c0a17c2690d17ba",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0003",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-07",
+  "bufferPostId": "6ac51de0d2669b6154b9c2b1"
+ },
+ {
+  "questionId": "si-0003",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-07",
+  "bufferPostId": "6ac51de26eeea25ca07c2758"
  },
  {
   "questionId": "si-0008",
   "kind": "prevote",
   "date": "2026-10-08",
-  "bufferPostId": "6ac512159a4f7a88bc25db2e"
+  "bufferPostId": "6ac512159a4f7a88bc25db2e",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0008",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-08",
+  "bufferPostId": "6ac51de469aec55670a962b9"
+ },
+ {
+  "questionId": "si-0008",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-08",
+  "bufferPostId": "6ac51de969aec55670a963b8"
  },
  {
   "questionId": "si-0006",
   "kind": "prevote",
   "date": "2026-10-09",
-  "bufferPostId": "6ac512199a4f7a88bc25dbcf"
+  "bufferPostId": "6ac512199a4f7a88bc25dbcf",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0006",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-09",
+  "bufferPostId": "6ac51dedd2669b6154b9c677"
+ },
+ {
+  "questionId": "si-0006",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-09",
+  "bufferPostId": "6ac51df440a4f8c7177e8ed4"
  },
  {
   "questionId": "si-0015",
   "kind": "prevote",
   "date": "2026-10-10",
-  "bufferPostId": "6ac5121c00682644acf1ec7b"
+  "bufferPostId": "6ac5121c00682644acf1ec7b",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0015",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-10",
+  "bufferPostId": "6ac51df7ec5da1bfe835e6f1"
+ },
+ {
+  "questionId": "si-0015",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-10",
+  "bufferPostId": "6ac51df969aec55670a967d0"
  },
  {
   "questionId": "si-0010",
   "kind": "prevote",
   "date": "2026-10-11",
-  "bufferPostId": "6ac51227fd4ede7c41a1c943"
+  "bufferPostId": "6ac51227fd4ede7c41a1c943",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0010",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-11",
+  "bufferPostId": "6ac51dfcd2669b6154b9c973"
+ },
+ {
+  "questionId": "si-0010",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-11",
+  "bufferPostId": "6ac51dfe6eeea25ca07c2ebe"
  },
  {
   "questionId": "si-0016",
   "kind": "prevote",
   "date": "2026-10-12",
-  "bufferPostId": "6ac51229a7c6bca6eb9d6d1d"
+  "bufferPostId": "6ac51229a7c6bca6eb9d6d1d",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0016",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-12",
+  "bufferPostId": "6ac51e0040a4f8c7177e9424"
+ },
+ {
+  "questionId": "si-0016",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-12",
+  "bufferPostId": "6ac51e0569aec55670a96a0b"
  },
  {
   "questionId": "si-0018",
   "kind": "prevote",
   "date": "2026-10-13",
-  "bufferPostId": "6ac5192b7422476c111fbc95"
+  "bufferPostId": "6ac5192b7422476c111fbc95",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0018",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-13",
+  "bufferPostId": "6ac51e086eeea25ca07c301c"
+ },
+ {
+  "questionId": "si-0018",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-13",
+  "bufferPostId": "6ac51e0a69aec55670a96af1"
  },
  {
   "questionId": "si-0019",
   "kind": "prevote",
   "date": "2026-10-14",
-  "bufferPostId": "6ac51930f2aae537b24761c6"
+  "bufferPostId": "6ac51930f2aae537b24761c6",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0019",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-14",
+  "bufferPostId": "6ac51e0b6eeea25ca07c30bc"
+ },
+ {
+  "questionId": "si-0019",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-14",
+  "bufferPostId": "6ac51e0d6eeea25ca07c311f"
  },
  {
   "questionId": "si-0020",
   "kind": "prevote",
   "date": "2026-10-15",
-  "bufferPostId": "6ac519326531870e15ce153d"
+  "bufferPostId": "6ac519326531870e15ce153d",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0020",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-15",
+  "bufferPostId": "6ac51e10ec5da1bfe835eec9"
+ },
+ {
+  "questionId": "si-0020",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-15",
+  "bufferPostId": "6ac51e146eeea25ca07c3494"
  },
  {
   "questionId": "si-0021",
   "kind": "prevote",
   "date": "2026-10-16",
-  "bufferPostId": "6ac519357422476c111fbe36"
+  "bufferPostId": "6ac519357422476c111fbe36",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0021",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-16",
+  "bufferPostId": "6ac51e1840a4f8c7177e9881"
+ },
+ {
+  "questionId": "si-0021",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-16",
+  "bufferPostId": "6ac51e1c6eeea25ca07c3640"
  },
  {
   "questionId": "si-0022",
   "kind": "prevote",
   "date": "2026-10-17",
-  "bufferPostId": "6ac51937f2caeb037caa231d"
+  "bufferPostId": "6ac51937f2caeb037caa231d",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0022",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-17",
+  "bufferPostId": "6ac51e1f40a4f8c7177e9a4d"
+ },
+ {
+  "questionId": "si-0022",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-17",
+  "bufferPostId": "6ac51e2369aec55670a976dc"
  },
  {
   "questionId": "si-0023",
   "kind": "prevote",
   "date": "2026-10-18",
-  "bufferPostId": "6ac51939f2caeb037caa23c5"
+  "bufferPostId": "6ac51939f2caeb037caa23c5",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0023",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-18",
+  "bufferPostId": "6ac51e273292783db5cdbfa6"
+ },
+ {
+  "questionId": "si-0023",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-18",
+  "bufferPostId": "6ac51e2ad2669b6154b9d6d3"
  },
  {
   "questionId": "si-0024",
   "kind": "prevote",
   "date": "2026-10-19",
-  "bufferPostId": "6ac5193b3a27afac4f4d93a4"
+  "bufferPostId": "6ac5193b3a27afac4f4d93a4",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0024",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-19",
+  "bufferPostId": "6ac51e2e69aec55670a97842"
+ },
+ {
+  "questionId": "si-0024",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-19",
+  "bufferPostId": "6ac51e3240a4f8c7177ea67d"
  },
  {
   "questionId": "si-0025",
   "kind": "prevote",
   "date": "2026-10-20",
-  "bufferPostId": "6ac5193df2caeb037caa2485"
+  "bufferPostId": "6ac5193df2caeb037caa2485",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0025",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-20",
+  "bufferPostId": "6ac51e3640a4f8c7177ea742"
+ },
+ {
+  "questionId": "si-0025",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-20",
+  "bufferPostId": "6ac51e393292783db5cdc3d3"
  },
  {
   "questionId": "si-0026",
   "kind": "prevote",
   "date": "2026-10-21",
-  "bufferPostId": "6ac5193f6531870e15ce176f"
+  "bufferPostId": "6ac5193f6531870e15ce176f",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0026",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-21",
+  "bufferPostId": "6ac51e3d40a4f8c7177eabcd"
+ },
+ {
+  "questionId": "si-0026",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-21",
+  "bufferPostId": "6ac51e4169aec55670a980b7"
  },
  {
   "questionId": "si-0027",
   "kind": "prevote",
   "date": "2026-10-22",
-  "bufferPostId": "6ac519413a27afac4f4d9464"
+  "bufferPostId": "6ac519413a27afac4f4d9464",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0027",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-22",
+  "bufferPostId": "6ac51e456eeea25ca07c4543"
+ },
+ {
+  "questionId": "si-0027",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-22",
+  "bufferPostId": "6ac51e49d2669b6154b9dd84"
  },
  {
   "questionId": "si-0028",
   "kind": "prevote",
   "date": "2026-10-23",
-  "bufferPostId": "6ac519437422476c111fbf66"
+  "bufferPostId": "6ac519437422476c111fbf66",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0028",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-23",
+  "bufferPostId": "6ac51e4c69aec55670a9863f"
+ },
+ {
+  "questionId": "si-0028",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-23",
+  "bufferPostId": "6ac51e526eeea25ca07c4a8c"
  },
  {
   "questionId": "si-0029",
   "kind": "prevote",
   "date": "2026-10-24",
-  "bufferPostId": "6ac51946f2caeb037caa2543"
+  "bufferPostId": "6ac51946f2caeb037caa2543",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0029",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-24",
+  "bufferPostId": "6ac51e566eeea25ca07c4b91"
+ },
+ {
+  "questionId": "si-0029",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-24",
+  "bufferPostId": "6ac51e58d2669b6154b9e3a1"
  },
  {
   "questionId": "si-0030",
   "kind": "prevote",
   "date": "2026-10-25",
-  "bufferPostId": "6ac519487422476c111fc013"
+  "bufferPostId": "6ac519487422476c111fc013",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0030",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-25",
+  "bufferPostId": "6ac51e5eec5da1bfe8360247"
+ },
+ {
+  "questionId": "si-0030",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-25",
+  "bufferPostId": "6ac51e636eeea25ca07c5271"
  },
  {
   "questionId": "si-0031",
   "kind": "prevote",
   "date": "2026-10-26",
-  "bufferPostId": "6ac51949f2caeb037caa2584"
+  "bufferPostId": "6ac51949f2caeb037caa2584",
+  "platform": "instagram"
+ },
+ {
+  "questionId": "si-0031",
+  "kind": "prevote",
+  "platform": "tiktok",
+  "date": "2026-10-26",
+  "bufferPostId": "6ac51e653292783db5cdcba7"
+ },
+ {
+  "questionId": "si-0031",
+  "kind": "prevote",
+  "platform": "youtube",
+  "date": "2026-10-26",
+  "bufferPostId": "6ac51e6740a4f8c7177ebd08"
  }
 ]

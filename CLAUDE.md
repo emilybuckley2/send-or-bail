@@ -1,7 +1,8 @@
 # Send or Bail? content engine
 
-Daily trail decision game on Instagram (@sendorbail). Each morning one fictional on-trail scenario
-goes out as a 9 second Reel; viewers comment their call (usually SEND or BAIL). No results posts,
+Daily trail decision game on Instagram, TikTok and YouTube Shorts (@sendorbail everywhere). Each
+morning one fictional on-trail scenario goes out as a 9 second vertical video; viewers comment
+their call (usually SEND or BAIL). No results posts,
 no first comments, no web app. Everything is rendered from `data/questions.json`.
 
 ## Setup in a fresh session
@@ -20,21 +21,27 @@ npm run validate && npm test
    following the editorial rules below.
    Fields per candidate: `category, type, scenario, choiceA, choiceB, map (hazards, optional
    milesOut/milesToGoal/gainFt/window/goalLabel), headline, caption, hashtags, realityCheck?`.
-   Leave out `id`, `date`, `status`, `seed`; `plan-week` assigns them.
+   Leave out `id`, `date`, `status`, `seed`; `plan-batch` assigns them.
 3. `npm run cli -- plan-batch data/candidates/<first-date>.json` validates, assigns consecutive dates,
    renders each Reel and stages `media/<date>/`. Fix any lint error it reports and rerun.
 4. Commit everything (questions.json, candidates, media) and push. Media links are pinned to the
    commit SHA, so commit before scheduling.
-5. `npm run cli -- schedule <first-date>` writes `out/schedule/<first-date>.json`: one Buffer payload
-   per day (text, dueAt in ET, videoUrl, thumbnailOffsetMs). Create each as an Instagram Reel on the
-   `sendorbail` channel (id `6ac510396a5c39ccb6311648`, organization `6a49474ab297c51c7661e1c5`) with
-   `mode: customScheduled`, `schedulingType: automatic`, `shouldShareToFeed: true`, no first comment.
-   Confirm each returned status is `scheduled`, then record the Buffer post ids in `data/posts.json`,
+5. `npm run cli -- schedule <first-date>` writes `out/schedule/<first-date>.json`: three Buffer
+   payloads per day (one per platform), each with `platform`, `channelId`, `title`, `text`, `dueAt`
+   in ET, `videoUrl` and `thumbnailOffsetMs`. Organization `6a49474ab297c51c7661e1c5`. Create each
+   with `mode: customScheduled`, `schedulingType: automatic`, the payload's text, dueAt and
+   channelId, a video asset from videoUrl with `thumbnailOffset`, and platform metadata:
+   - instagram (`6ac510396a5c39ccb6311648`): `{instagram: {type: "reel", shouldShareToFeed: true}}`
+   - tiktok (`6ac51d4a6a5c39ccb631d113`): `{tiktok: {title}}`
+   - youtube (`6ac51c236a5c39ccb631aa11`): `{youtube: {title, categoryId: "17", privacy: "public",
+     madeForKids: false, notifySubscribers: true}}`
+   No first comment anywhere. Confirm each returned status is `scheduled`, then append
+   `{questionId, kind: "prevote", platform, date, bufferPostId}` per post to `data/posts.json`,
    commit and push.
 6. Finish with a short summary: every headline with its date, and anything that needs Emily's attention.
 
-Posts go out at 7:30am ET. Never post results, never set a first comment, never auto-publish to any
-channel other than `sendorbail`.
+Posts go out at 7:30am ET on all three channels. Never post results, never set a first comment,
+never publish to any channel that is not a Send or Bail? channel (the three ids above).
 
 ## Editorial rules (apply to every generated string)
 
@@ -57,6 +64,8 @@ channel other than `sendorbail`.
   blank line, then exactly `Comment KEYWORD_A or KEYWORD_B.` Nothing after it.
 - Hashtags: exactly 5, lowercase, broad hiking and outdoors first (`#hiking #outdoors #mountains
   #getoutside #backcountry #hikingadventures`), one for the sport, always `#sendorbail` last.
+  (Instagram caps posts at 5. `schedule` adds extra discovery tags for TikTok and `#Shorts` for
+  YouTube on its own; don't put them in the question.)
 - `realityCheck` (1 to 2 calm sentences) when the hazard is real: storm, avalanche, whiteout, heat,
   snowfield, swift water. It is stored, not posted.
 - No em-dashes or en-dashes anywhere. No emoji on screen; captions carry none either.

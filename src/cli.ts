@@ -4,7 +4,7 @@ import { lintQuestion } from "./lint/text";
 import { renderQuestion, renderResults } from "./render/run";
 import { Result } from "./schema";
 import { parseComments, tally } from "./tally/tally";
-import { nextDay, planPrevote, planResults } from "./schedule/plan";
+import { PLATFORMS, nextDay, planPrevote, planResults } from "./schedule/plan";
 
 const QUESTIONS = "data/questions.json";
 const WEEK_ONE = ["si-0001", "si-0003", "si-0008", "si-0006", "si-0015", "si-0010", "si-0016"];
@@ -31,11 +31,12 @@ async function render(target: string) {
 
 // Writes the Buffer payloads for every scheduled question from a start date; a Claude
 // session posts them through the Buffer connector.
-function schedule(from: string) {
+// schedule <from> [to] [platforms]   e.g. schedule 2026-10-07 2026-10-26 tiktok,youtube
+function schedule(from: string, to = "9999-12-31", platforms = PLATFORMS) {
   const posts = load()
-    .filter((q) => q.status === "scheduled" && q.date && q.date >= from)
+    .filter((q) => q.status === "scheduled" && q.date && q.date >= from && q.date <= to)
     .sort((a, b) => a.date!.localeCompare(b.date!))
-    .map((q) => planPrevote(q));
+    .flatMap((q) => platforms.map((p) => planPrevote(q, p)));
   fs.mkdirSync("out/schedule", { recursive: true });
   const file = `out/schedule/${from}.json`;
   fs.writeFileSync(file, JSON.stringify(posts, null, 2) + "\n");
@@ -121,7 +122,8 @@ async function runRenderResults(id: string) {
 const [cmd, arg, ...rest] = process.argv.slice(2);
 const commands: Record<string, () => Promise<void>> = {
   render: () => render(arg ?? "week1"),
-  schedule: async () => schedule(arg ?? new Date().toISOString().slice(0, 10)),
+  schedule: async () => schedule(arg ?? new Date().toISOString().slice(0, 10), rest[0],
+    rest[1] ? (rest[1].split(",") as typeof PLATFORMS) : undefined),
   "plan-batch": () => planBatch(arg),
   tally: async () => runTally(arg, rest),
   "render-results": () => runRenderResults(arg),
