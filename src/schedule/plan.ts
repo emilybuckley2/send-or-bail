@@ -1,4 +1,4 @@
-import type { Question } from "../schema";
+import type { Question, Result } from "../schema";
 
 export const REPO_RAW = "https://raw.githubusercontent.com/emilybuckley2/send-or-bail";
 export const MEDIA_BRANCH = "claude/compassionate-hopper-xzvr52";
@@ -35,8 +35,36 @@ export function planPrevote(q: Question, time = POST_TIME.prevote): PlannedPost 
     kind: "prevote",
     dueAt: `${q.date}T${time}:00${etOffset(q.date, time)}`,
     text: postText(q),
-    firstComment: q.realityCheck,
+    // No first comment: a pinned reality check reads as the answer and kills the vote.
     videoUrl: `${REPO_RAW}/${MEDIA_BRANCH}/media/${q.date}/prevote.mp4`,
     thumbnailOffsetMs: 8500, // fork + CTA fully on screen
+  };
+}
+
+export function nextDay(date: string): string {
+  const d = new Date(`${date}T12:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0, 10);
+}
+
+export function resultsCaption(q: Question, r: Result): string {
+  const total = r.countA + r.countB;
+  const pctA = total ? Math.round((r.countA / total) * 100) : 50;
+  const lead = `Yesterday's call: ${pctA}% ${q.choiceA.keyword}, ${100 - pctA}% ${q.choiceB.keyword}.`;
+  return `${lead}\nWould you change your answer? Tell us below.\n\nNew call tomorrow, 7:30am ET.`;
+}
+
+export function planResults(q: Question, r: Result): PlannedPost {
+  if (!q.date) throw new Error(`${q.id} has no date`);
+  const date = nextDay(q.date);
+  const caption = resultsCaption(q, r);
+  return {
+    questionId: q.id,
+    kind: "results",
+    dueAt: `${date}T${POST_TIME.results}:00${etOffset(date, POST_TIME.results)}`,
+    text: q.hashtags?.length ? `${caption}\n\n${q.hashtags.join(" ")}` : caption,
+    firstComment: q.realityCheck,
+    videoUrl: `${REPO_RAW}/${MEDIA_BRANCH}/media/${date}/results.mp4`,
+    thumbnailOffsetMs: 6000,
   };
 }

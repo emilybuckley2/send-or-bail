@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "validate": "tsx src/scripts/validate.ts",
     "music": "tsx src/music/synth.ts",
-    "cli": "tsx src/cli.ts"
+    "cli": "tsx src/cli.ts",
+    "test": "tsx test/tally.test.ts"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "^5.3.0",

@@ -12,6 +12,9 @@ export type MapBox = { x: number; y: number; w: number; h: number };
 export type MapProgress = { trail: number; hazards: number; fork: number; pulse: number };
 export const fullyDrawn: MapProgress = { trail: 1, hazards: 1, fork: 1, pulse: 0 };
 
+// Results mode: branch widths grow to vote share; blazes carry the percentage.
+export type MapResult = { shareA: number; shareB: number; grow: number; pctA: number; pctB: number };
+
 const fmtMi = (n: number) => `${n} MI`;
 const fmtFt = (n: number) => `+${n.toLocaleString("en-US")} FT`;
 
@@ -41,7 +44,15 @@ const Blaze: React.FC<{ label: string; bg: string; fg: string; scale: number }> 
   }}>{label}</div>
 );
 
-export const TrailMap: React.FC<{ q: Question; box: MapBox; progress?: MapProgress }> = ({ q, box, progress = fullyDrawn }) => {
+const Pct: React.FC<{ value: number; fg: string }> = ({ value, fg }) => (
+  <div style={{ position: "absolute", left: "50%", top: "100%", transform: "translateX(-50%)", marginTop: 4,
+    fontFamily: font.display, fontWeight: 800, fontSize: 112, lineHeight: 1, color: fg,
+    textShadow: `0 0 12px ${color.paper}, 0 0 24px ${color.paper}` }}>
+    {Math.round(value)}%
+  </div>
+);
+
+export const TrailMap: React.FC<{ q: Question; box: MapBox; progress?: MapProgress; result?: MapResult }> = ({ q, box, progress = fullyDrawn, result }) => {
   const L = useMemo(() => trailLayout(q.map.seed, box), [q.map.seed, box]);
   const lenApproach = getLength(L.approach);
   const lenA = getLength(L.branchA);
@@ -78,8 +89,17 @@ export const TrailMap: React.FC<{ q: Question; box: MapBox; progress?: MapProgre
           <path d={L.branchB} mask="url(#m-b)" />
         </g>
         <path d={L.approach} mask="url(#m-approach)" stroke={color.blaze} strokeWidth={9} fill="none" strokeDasharray={dash} strokeLinecap="round" />
-        <path d={L.branchA} mask="url(#m-a)" stroke={color.blaze} strokeWidth={9} fill="none" strokeDasharray={dash} strokeLinecap="round" />
-        <path d={L.branchB} mask="url(#m-b)" stroke={color.ink} strokeWidth={9} fill="none" strokeDasharray={dash} strokeLinecap="round" />
+        {result ? (
+          <>
+            <path d={L.branchA} stroke={color.blaze} strokeWidth={8 + 56 * result.shareA * result.grow} fill="none" strokeLinecap="round" />
+            <path d={L.branchB} stroke={color.ink} strokeWidth={8 + 56 * result.shareB * result.grow} fill="none" strokeLinecap="round" />
+          </>
+        ) : (
+          <>
+            <path d={L.branchA} mask="url(#m-a)" stroke={color.blaze} strokeWidth={9} fill="none" strokeDasharray={dash} strokeLinecap="round" />
+            <path d={L.branchB} mask="url(#m-b)" stroke={color.ink} strokeWidth={9} fill="none" strokeDasharray={dash} strokeLinecap="round" />
+          </>
+        )}
         {/* trailhead */}
         <circle cx={L.start.x} cy={L.start.y} r={10} fill={color.blaze} />
         {/* goal peak */}
@@ -143,9 +163,11 @@ export const TrailMap: React.FC<{ q: Question; box: MapBox; progress?: MapProgre
       {/* fork blazes */}
       <Label x={blazeA.x} y={blazeA.y}>
         <Blaze label={q.choiceA.label} bg={color.blaze} fg={color.paper} scale={progress.fork} />
+        {result && <Pct value={result.pctA} fg={color.blaze} />}
       </Label>
       <Label x={blazeB.x} y={blazeB.y}>
         <Blaze label={q.choiceB.label} bg={color.ink} fg={color.paper} scale={progress.fork} />
+        {result && <Pct value={result.pctB} fg={color.ink} />}
       </Label>
     </div>
   );

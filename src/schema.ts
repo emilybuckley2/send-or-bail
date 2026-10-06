@@ -37,3 +37,17 @@ export const Question = z
   })
   .refine((q) => q.choiceA.keyword !== q.choiceB.keyword, "keywords must differ");
 export type Question = z.infer<typeof Question>;
+
+export const Comment = z.object({ handle: z.string(), text: z.string(), likes: z.number().optional() });
+export type Comment = z.infer<typeof Comment>;
+
+export const Result = z.object({
+  questionId: z.string(),
+  countA: z.number().int().nonnegative(),
+  countB: z.number().int().nonnegative(),
+  unclear: z.number().int().nonnegative(),
+  topComments: z.array(z.object({ handle: z.string(), text: z.string(), choice: z.enum(["A", "B"]) })).max(3),
+  source: z.enum(["manual", "paste", "api"]),
+  tallied_at: z.string(),
+});
+export type Result = z.infer<typeof Result>;

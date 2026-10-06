@@ -4,7 +4,7 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { bundle } from "@remotion/bundler";
 import { renderMedia, renderStill, selectComposition } from "@remotion/renderer";
-import type { Question } from "../schema";
+import type { Question, Result } from "../schema";
 import { Track, pickTrack } from "../music/tracks";
 
 const browserExecutable = process.env.REMOTION_BROWSER || undefined;
@@ -51,5 +51,30 @@ export async function renderQuestion(q: Question, outDir: string, previousTrack?
   await still("Feed", q, path.join(outDir, "feed.png"));
   fs.writeFileSync(path.join(outDir, "caption.txt"), q.caption + "\n");
   if (q.realityCheck) fs.writeFileSync(path.join(outDir, "first_comment.txt"), q.realityCheck + "\n");
+  return track?.id;
+}
+
+// Results Reel + silent copy + still for one tallied question.
+export async function renderResults(q: Question, r: Result, outDir: string, previousTrack?: string): Promise<string | undefined> {
+  fs.mkdirSync(outDir, { recursive: true });
+  const tracks = loadTracks();
+  // Seed + 1 so the results Reel doesn't reuse the pre-vote track.
+  const track = tracks.length ? pickTrack(tracks, q.map.seed + 1, undefined, previousTrack) : undefined;
+  const inputProps = { q, r, music: track ? { file: track.file, startSec: track.startSec } : null };
+  const url = await getBundle();
+  const composition = await selectComposition({ serveUrl: url, id: "Results", inputProps, browserExecutable });
+  const raw = path.join(outDir, "results_raw.mp4");
+  await renderMedia({ composition, serveUrl: url, codec: "h264", audioCodec: "aac", outputLocation: raw, inputProps, browserExecutable });
+  const final = path.join(outDir, "results.mp4");
+  if (track) {
+    execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-i", raw, "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
+      "-c:a", "aac", "-b:a", "192k", "-ar", "48000", final]);
+  } else {
+    fs.copyFileSync(raw, final);
+  }
+  execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-i", raw, "-c:v", "copy", "-an", path.join(outDir, "results_silent.mp4")]);
+  fs.rmSync(raw);
+  const stillComp = await selectComposition({ serveUrl: url, id: "ResultsStill", inputProps: { q, r, still: true }, browserExecutable });
+  await renderStill({ composition: stillComp, serveUrl: url, output: path.join(outDir, "results.png"), inputProps: { q, r, still: true }, browserExecutable });
   return track?.id;
 }
