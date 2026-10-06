@@ -1,7 +1,7 @@
 [
  {
   "id": "si-0001",
-  "status": "approved",
+  "status": "scheduled",
   "category": "Trail running",
   "type": "judgment",
   "scenario": [
@@ -29,8 +29,15 @@
   },
   "realityCheck": "If you can hear thunder, you're within striking distance. An exposed ridge is the worst place to be when it arrives.",
   "headline": "Clear sky. Distant thunder.",
-  "caption": "Blue sky above, thunder somewhere behind you. Comment SEND or BAIL.",
-  "date": null
+  "caption": "Blue sky above, thunder somewhere behind you. Results tomorrow.\n\nComment SEND or BAIL.",
+  "date": "2026-10-06",
+  "hashtags": [
+   "#trailrunning",
+   "#mountainrunning",
+   "#skyrunning",
+   "#trailrunner",
+   "#sendorbail"
+  ]
  },
  {
   "id": "si-0002",
@@ -68,7 +75,7 @@
  },
  {
   "id": "si-0003",
-  "status": "approved",
+  "status": "scheduled",
   "category": "Trail running",
   "type": "gear",
   "scenario": [
@@ -93,8 +100,15 @@
    "goalLabel": "Finish"
   },
   "headline": "34 degrees. Calf-deep creek.",
-  "caption": "9 miles left either way. Comment ON or OFF.",
-  "date": null
+  "caption": "9 miles left either way. Results tomorrow.\n\nComment ON or OFF.",
+  "date": "2026-10-07",
+  "hashtags": [
+   "#trailrunning",
+   "#ultrarunning",
+   "#trailrunner",
+   "#runningcommunity",
+   "#sendorbail"
+  ]
  },
  {
   "id": "si-0005",
@@ -128,7 +142,7 @@
  },
  {
   "id": "si-0006",
-  "status": "approved",
+  "status": "scheduled",
   "category": "Skiing",
   "type": "judgment",
   "scenario": [
@@ -153,8 +167,15 @@
   },
   "realityCheck": "Tracks don't mean a slope is stable, and many avalanche accidents happen at Considerable.",
   "headline": "Fresh tracks. Considerable danger.",
-  "caption": "Someone else already skied it. Comment SEND or BAIL.",
-  "date": null
+  "caption": "Someone else already skied it. Results tomorrow.\n\nComment SEND or BAIL.",
+  "date": "2026-10-09",
+  "hashtags": [
+   "#backcountryskiing",
+   "#skitouring",
+   "#splitboarding",
+   "#avalanchesafety",
+   "#sendorbail"
+  ]
  },
  {
   "id": "si-0007",
@@ -185,7 +206,7 @@
  },
  {
   "id": "si-0008",
-  "status": "approved",
+  "status": "scheduled",
   "category": "Navigation",
   "type": "route",
   "scenario": [
@@ -209,8 +230,15 @@
    "goalLabel": "Car"
   },
   "headline": "The GPS and the sign disagree.",
-  "caption": "One of them is wrong. Comment GPS or SIGN.",
-  "date": null
+  "caption": "One of them is wrong. Results tomorrow.\n\nComment GPS or SIGN.",
+  "date": "2026-10-08",
+  "hashtags": [
+   "#hiking",
+   "#backpacking",
+   "#hikingadventures",
+   "#outdoorskills",
+   "#sendorbail"
+  ]
  },
  {
   "id": "si-0009",
@@ -244,7 +272,7 @@
  },
  {
   "id": "si-0010",
-  "status": "approved",
+  "status": "scheduled",
   "category": "Endurance",
   "type": "judgment",
   "scenario": [
@@ -270,8 +298,15 @@
    "goalLabel": "Aid station"
   },
   "headline": "5 miles. 55 minutes.",
-  "caption": "Chase the cutoff or call it? Comment SEND or BAIL.",
-  "date": null
+  "caption": "Chase the cutoff or call it? Results tomorrow.\n\nComment SEND or BAIL.",
+  "date": "2026-10-11",
+  "hashtags": [
+   "#ultrarunning",
+   "#ultramarathon",
+   "#trailrace",
+   "#trailrunning",
+   "#sendorbail"
+  ]
  },
  {
   "id": "si-0013",
@@ -336,7 +371,7 @@
  },
  {
   "id": "si-0015",
-  "status": "approved",
+  "status": "scheduled",
   "category": "Hiking",
   "type": "route",
   "scenario": [
@@ -360,12 +395,19 @@
    "goalLabel": "Car"
   },
   "headline": "2 miles of switchbacks. Or 0.4 of scree.",
-  "caption": "Your knees have opinions. Comment SCREE or TRAIL.",
-  "date": null
+  "caption": "Your knees have opinions. Results tomorrow.\n\nComment SCREE or TRAIL.",
+  "date": "2026-10-10",
+  "hashtags": [
+   "#hiking",
+   "#scrambling",
+   "#mountainlife",
+   "#hikingadventures",
+   "#sendorbail"
+  ]
  },
  {
   "id": "si-0016",
-  "status": "approved",
+  "status": "scheduled",
   "category": "Trail running",
   "type": "gear",
   "scenario": [
@@ -389,8 +431,15 @@
   },
   "realityCheck": "A slip on firm snow picks up speed fast, and the runout is what decides how it ends. Without traction, the detour is the honest call.",
   "headline": "200 feet of firm snow. No spikes.",
-  "caption": "45 minutes or one committed shuffle. Comment CROSS or AROUND.",
-  "date": null
+  "caption": "45 minutes or one committed shuffle. Results tomorrow.\n\nComment CROSS or AROUND.",
+  "date": "2026-10-12",
+  "hashtags": [
+   "#trailrunning",
+   "#mountainrunning",
+   "#alpinehiking",
+   "#mountainlife",
+   "#sendorbail"
+  ]
  },
  {
   "id": "si-0017",

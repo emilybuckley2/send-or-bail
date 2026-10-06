@@ -32,6 +32,8 @@ export const Question = z
     musicTrack: z.string().optional(),
     headline: z.string(),
     caption: z.string(),
+    // Instagram allows at most 5 hashtags per post.
+    hashtags: z.array(z.string().regex(/^#[a-z0-9]+$/)).max(5).optional(),
   })
   .refine((q) => q.choiceA.keyword !== q.choiceB.keyword, "keywords must differ");
 export type Question = z.infer<typeof Question>;
