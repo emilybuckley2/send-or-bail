@@ -1,0 +1,426 @@
+[
+ {
+  "id": "si-0001",
+  "status": "approved",
+  "category": "Trail running",
+  "type": "judgment",
+  "scenario": [
+   "Ridge run. 4 miles of exposed ridge ahead.",
+   "Sky's clear overhead, but you just heard thunder."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 4127,
+   "milesOut": 6,
+   "milesToGoal": 4,
+   "gainFt": 600,
+   "hazards": [
+    "storm"
+   ],
+   "window": "thunder heard",
+   "goalLabel": "Ridge end"
+  },
+  "realityCheck": "If you can hear thunder, you're within striking distance. An exposed ridge is the worst place to be when it arrives.",
+  "headline": "Clear sky. Distant thunder.",
+  "caption": "Blue sky above, thunder somewhere behind you. Comment SEND or BAIL.",
+  "date": null
+ },
+ {
+  "id": "si-0002",
+  "status": "approved",
+  "category": "Hiking",
+  "type": "judgment",
+  "scenario": [
+   "Summit is 1.2 miles and 900 ft away.",
+   "Sunset in 60 minutes. Headlamp at 15%. 5 miles back to the car."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "TURN AROUND",
+   "keyword": "TURN"
+  },
+  "map": {
+   "seed": 8830,
+   "milesOut": 5,
+   "milesToGoal": 1.2,
+   "gainFt": 900,
+   "hazards": [
+    "sunset",
+    "battery"
+   ],
+   "window": "60 min",
+   "goalLabel": "Summit"
+  },
+  "realityCheck": "Descents in the dark run far slower than you plan for, and 15% won't last.",
+  "headline": "60 minutes of light. 15% battery.",
+  "caption": "Summit's right there. So is sunset. Comment SEND or TURN.",
+  "date": null
+ },
+ {
+  "id": "si-0003",
+  "status": "approved",
+  "category": "Trail running",
+  "type": "gear",
+  "scenario": [
+   "34°F. Mile 3 of 12.",
+   "The creek is calf deep and there's no log."
+  ],
+  "choiceA": {
+   "label": "SHOES ON",
+   "keyword": "ON"
+  },
+  "choiceB": {
+   "label": "SHOES OFF",
+   "keyword": "OFF"
+  },
+  "map": {
+   "seed": 2291,
+   "milesOut": 3,
+   "milesToGoal": 9,
+   "hazards": [
+    "creek"
+   ],
+   "goalLabel": "Finish"
+  },
+  "headline": "34 degrees. Calf-deep creek.",
+  "caption": "9 miles left either way. Comment ON or OFF.",
+  "date": null
+ },
+ {
+  "id": "si-0005",
+  "status": "approved",
+  "category": "Climbing",
+  "type": "judgment",
+  "scenario": [
+   "Last pitch. A passing shower just soaked the rock.",
+   "Anchor is 40 ft up. Your partner is getting cold."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "RAP OFF",
+   "keyword": "RAP"
+  },
+  "map": {
+   "seed": 7062,
+   "gainFt": 40,
+   "hazards": [
+    "wet_rock"
+   ],
+   "goalLabel": "Anchor"
+  },
+  "realityCheck": "Friction drops a lot on wet rock. Know your retreat before you need it.",
+  "headline": "40 feet. Wet rock.",
+  "caption": "So close. So slick. Comment SEND or RAP.",
+  "date": null
+ },
+ {
+  "id": "si-0006",
+  "status": "approved",
+  "category": "Skiing",
+  "type": "judgment",
+  "scenario": [
+   "18 inches fell overnight. Danger is Considerable on NE aspects.",
+   "Your line faces NE. There are already tracks in it."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "OTHER LINE",
+   "keyword": "OTHER"
+  },
+  "map": {
+   "seed": 9933,
+   "hazards": [
+    "avalanche"
+   ],
+   "window": "NE aspect",
+   "goalLabel": "Your line"
+  },
+  "realityCheck": "Tracks don't mean a slope is stable, and many avalanche accidents happen at Considerable.",
+  "headline": "Fresh tracks. Considerable danger.",
+  "caption": "Someone else already skied it. Comment SEND or OTHER.",
+  "date": null
+ },
+ {
+  "id": "si-0007",
+  "status": "approved",
+  "category": "Mountain biking",
+  "type": "judgment",
+  "scenario": [
+   "New trail. A drop that looks rollable.",
+   "You can't see the landing. Your friends already went."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "WALK IT",
+   "keyword": "WALK"
+  },
+  "map": {
+   "seed": 3348,
+   "hazards": [
+    "blind_drop"
+   ]
+  },
+  "headline": "Can't see the landing.",
+  "caption": "Everyone else made it. Probably. Comment SEND or WALK.",
+  "date": null
+ },
+ {
+  "id": "si-0008",
+  "status": "approved",
+  "category": "Navigation",
+  "type": "route",
+  "scenario": [
+   "5 miles from the car, the trail splits.",
+   "Your GPS says left. The trail sign says right."
+  ],
+  "choiceA": {
+   "label": "TRUST GPS",
+   "keyword": "GPS"
+  },
+  "choiceB": {
+   "label": "TRUST SIGN",
+   "keyword": "SIGN"
+  },
+  "map": {
+   "seed": 6175,
+   "milesToGoal": 5,
+   "hazards": [
+    "none"
+   ],
+   "goalLabel": "Car"
+  },
+  "headline": "The GPS and the sign disagree.",
+  "caption": "One of them is wrong. Comment GPS or SIGN.",
+  "date": null
+ },
+ {
+  "id": "si-0009",
+  "status": "approved",
+  "category": "Trail running",
+  "type": "pace",
+  "scenario": [
+   "14 miles into a group run. The pace has been too fast all day.",
+   "Someone says, \"Let's add the extra loop.\""
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "ABSOLUTELY NOT",
+   "keyword": "NOT"
+  },
+  "map": {
+   "seed": 1489,
+   "milesOut": 14,
+   "milesToGoal": 4,
+   "hazards": [
+    "none"
+   ],
+   "goalLabel": "Extra loop"
+  },
+  "headline": "\"Let's add the extra loop.\"",
+  "caption": "There's always one. Comment SEND or NOT.",
+  "date": null
+ },
+ {
+  "id": "si-0010",
+  "status": "approved",
+  "category": "Endurance",
+  "type": "judgment",
+  "scenario": [
+   "Mile 40 of a 50-miler. Next aid station is 5 miles away.",
+   "Cutoff in 55 minutes. Your legs are cooked."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "DROP",
+   "keyword": "DROP"
+  },
+  "map": {
+   "seed": 2756,
+   "milesOut": 40,
+   "milesToGoal": 5,
+   "hazards": [
+    "cutoff"
+   ],
+   "window": "55 min",
+   "goalLabel": "Aid station"
+  },
+  "headline": "5 miles. 55 minutes.",
+  "caption": "Chase the cutoff or call it? Comment SEND or DROP.",
+  "date": null
+ },
+ {
+  "id": "si-0013",
+  "status": "approved",
+  "category": "Hiking",
+  "type": "judgment",
+  "scenario": [
+   "80°F. 6 miles to the car. Half a liter left.",
+   "There's a stream right here. No filter."
+  ],
+  "choiceA": {
+   "label": "DRINK IT",
+   "keyword": "DRINK"
+  },
+  "choiceB": {
+   "label": "HOLD OUT",
+   "keyword": "HOLD"
+  },
+  "map": {
+   "seed": 7718,
+   "milesToGoal": 6,
+   "hazards": [
+    "heat"
+   ],
+   "window": "0.5 L left",
+   "goalLabel": "Car"
+  },
+  "realityCheck": "Waterborne illness is real but usually delayed and treatable. Serious dehydration in heat is the more immediate risk. A backup tablet fixes all of this.",
+  "headline": "Half a liter. 6 miles. 80 degrees.",
+  "caption": "Thirsty math. Comment DRINK or HOLD.",
+  "date": null
+ },
+ {
+  "id": "si-0014",
+  "status": "approved",
+  "category": "Trail running",
+  "type": "judgment",
+  "scenario": [
+   "The summit cairn is half a mile away.",
+   "A whiteout is rolling in, and your tracks behind you are filling."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "TURN AROUND",
+   "keyword": "TURN"
+  },
+  "map": {
+   "seed": 3021,
+   "milesToGoal": 0.5,
+   "hazards": [
+    "whiteout"
+   ],
+   "goalLabel": "Summit"
+  },
+  "realityCheck": "In a whiteout, your own tracks are often the best way home.",
+  "headline": "Half a mile. Tracks disappearing.",
+  "caption": "Tag the summit or follow your tracks? Comment SEND or TURN.",
+  "date": null
+ },
+ {
+  "id": "si-0015",
+  "status": "approved",
+  "category": "Hiking",
+  "type": "route",
+  "scenario": [
+   "Descent. The trail switchbacks 2 miles down to the car.",
+   "A loose scree gully cuts straight there in 0.4."
+  ],
+  "choiceA": {
+   "label": "TAKE THE GULLY",
+   "keyword": "SCREE"
+  },
+  "choiceB": {
+   "label": "STAY ON TRAIL",
+   "keyword": "TRAIL"
+  },
+  "map": {
+   "seed": 5208,
+   "milesToGoal": 2,
+   "hazards": [
+    "none"
+   ],
+   "goalLabel": "Car"
+  },
+  "headline": "2 miles of switchbacks. Or 0.4 of scree.",
+  "caption": "Your knees have opinions. Comment SCREE or TRAIL.",
+  "date": null
+ },
+ {
+  "id": "si-0016",
+  "status": "approved",
+  "category": "Trail running",
+  "type": "gear",
+  "scenario": [
+   "A hard snowfield crosses the trail. 200 ft across, rocks at the bottom.",
+   "No microspikes. The detour around adds 45 minutes."
+  ],
+  "choiceA": {
+   "label": "CROSS IT",
+   "keyword": "CROSS"
+  },
+  "choiceB": {
+   "label": "GO AROUND",
+   "keyword": "AROUND"
+  },
+  "map": {
+   "seed": 6641,
+   "hazards": [
+    "snowfield"
+   ],
+   "window": "+45 min detour"
+  },
+  "realityCheck": "A slip on firm snow picks up speed fast, and the runout is what decides how it ends. Without traction, the detour is the honest call.",
+  "headline": "200 feet of firm snow. No spikes.",
+  "caption": "45 minutes or one committed shuffle. Comment CROSS or AROUND.",
+  "date": null
+ },
+ {
+  "id": "si-0017",
+  "status": "approved",
+  "category": "Backpacking",
+  "type": "judgment",
+  "scenario": [
+   "Day two. Planned camp is 4 miles and 1,400 ft away.",
+   "You're wrecked. There's a flat spot with water right here."
+  ],
+  "choiceA": {
+   "label": "PUSH ON",
+   "keyword": "PUSH"
+  },
+  "choiceB": {
+   "label": "STOP HERE",
+   "keyword": "STOP"
+  },
+  "map": {
+   "seed": 3907,
+   "milesToGoal": 4,
+   "gainFt": 1400,
+   "hazards": [
+    "sunset"
+   ],
+   "window": "2 hrs light",
+   "goalLabel": "Planned camp"
+  },
+  "headline": "4 more miles. Or right here.",
+  "caption": "Tomorrow-you is watching. Comment PUSH or STOP.",
+  "date": null
+ }
+]
