@@ -6,6 +6,7 @@ import { Cover } from "./stills/Cover";
 import { Feed } from "./stills/Feed";
 import { PREVOTE_FRAMES, PreVoteReel } from "./reels/PreVoteReel";
 import { RESULTS_FRAMES, ResultsReel } from "./reels/ResultsReel";
+import { HOOK_FRAMES, HookReel } from "./reels/HookReel";
 import type { Question, Result } from "../schema";
 
 const sample = questions[0] as Question;
@@ -24,6 +25,9 @@ export const Root: React.FC = () => (
     <Still id="Feed" component={Feed} width={1080} height={1350} defaultProps={{ q: sample }} />
     <Composition id="PreVote" component={PreVoteReel} width={1080} height={1920} fps={30}
       durationInFrames={PREVOTE_FRAMES} defaultProps={{ q: sample, music: null }} />
+    <Composition id="Hook" component={HookReel} width={1080} height={1920} fps={30}
+      durationInFrames={HOOK_FRAMES} defaultProps={{ q: sample, music: null }} />
+    <Still id="HookCover" component={HookReel} width={1080} height={1920} defaultProps={{ q: sample, music: null }} />
     <Composition id="Results" component={ResultsReel} width={1080} height={1920} fps={30}
       durationInFrames={RESULTS_FRAMES} defaultProps={{ q: sample, r: sampleResult, music: null }} />
     <Still id="ResultsStill" component={ResultsReel} width={1080} height={1920}

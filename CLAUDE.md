@@ -5,6 +5,17 @@ morning one fictional on-trail scenario goes out as a 9 second vertical video; v
 their call (usually SEND or BAIL). No results posts,
 no first comments, no web app. Everything is rendered from `data/questions.json`.
 
+## Current state (Oct 23, 2026): TikTok hook experiment, routine paused
+
+The first 17 days (classic 9 s format, three platforms) averaged ~140 views a post with 2 comments
+in 51 posts and 3 to 4 s average watch time, so viewers left before the fork appeared at 5.5 s.
+The monthly routine is paused. Instagram and YouTube stop after Oct 26. TikTok runs a 14 day
+experiment, Oct 24 to Nov 6, in the **hook** format (`src/render/reels/HookReel.tsx`): 6 seconds,
+the headline, map, both choices and "SEND or BAIL?" all on frame one, caption opens with the
+question. Kill rule at the end: continue only if posts average 5+ comments or any post passes
+2,000 views. Render with `render <ids> hook`, batch with `plan-batch <file> hook`, schedule with
+`schedule <from> <to> tiktok hook`. Media for hook posts is `media/<date>/hook.mp4`.
+
 ## Setup in a fresh session
 
 ```

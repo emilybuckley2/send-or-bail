@@ -15,9 +15,12 @@ export const CHANNELS = {
 } as const;
 export type Platform = keyof typeof CHANNELS;
 
+export type Format = "classic" | "hook";
+
 export type PlannedPost = {
   questionId: string;
   kind: "prevote" | "results";
+  format: Format;
   platform: Platform;
   channelId: string;
   title?: string; // YouTube and TikTok
@@ -40,30 +43,36 @@ export function etOffset(date: string, time: string): string {
 // Extra discovery tags for platforms that reward more than Instagram's five.
 const EXTRA_TAGS = ["#trail", "#adventure", "#wouldyou", "#outdoorlife", "#explore"];
 
-export function postText(q: Question, platform: Platform = "instagram"): string {
+export function postText(q: Question, platform: Platform = "instagram", format: Format = "classic"): string {
   const tags = q.hashtags ?? [];
   if (platform === "instagram") return tags.length ? `${q.caption}\n\n${tags.join(" ")}` : q.caption;
   if (platform === "tiktok") {
     const all = [...tags.filter((t) => t !== "#sendorbail"), ...EXTRA_TAGS.filter((t) => !tags.includes(t)), "#sendorbail"];
+    if (format === "hook") {
+      // Hook format: the caption opens with the question and asks for one word.
+      const lead = q.caption.slice(0, q.caption.indexOf("\n\nComment ")).trim();
+      return `${q.choiceA.keyword} or ${q.choiceB.keyword}? ${lead}\n\nOne word in the comments.\n\n${all.join(" ")}`;
+    }
     return `${q.caption}\n\n${all.join(" ")}`;
   }
   // YouTube: description carries the question and #Shorts so it lands on the Shorts shelf.
   return `${q.scenario.join(" ")}\n\n${q.caption}\n\n#Shorts ${tags.join(" ")}`;
 }
 
-export function planPrevote(q: Question, platform: Platform = "instagram", time = POST_TIME.prevote): PlannedPost {
+export function planPrevote(q: Question, platform: Platform = "instagram", format: Format = "classic", time = POST_TIME.prevote): PlannedPost {
   if (!q.date) throw new Error(`${q.id} has no date`);
   return {
     questionId: q.id,
     kind: "prevote",
+    format,
     platform,
     channelId: CHANNELS[platform],
     title: platform === "instagram" ? undefined : `${q.headline} Send or Bail?`.slice(0, 100),
     dueAt: `${q.date}T${time}:00${etOffset(q.date, time)}`,
-    text: postText(q, platform),
+    text: postText(q, platform, format),
     // No first comment: a pinned reality check reads as the answer and kills the vote.
-    videoUrl: `${REPO_RAW}/${mediaRef()}/media/${q.date}/prevote.mp4`,
-    thumbnailOffsetMs: 8500, // fork + CTA fully on screen
+    videoUrl: `${REPO_RAW}/${mediaRef()}/media/${q.date}/${format === "hook" ? "hook" : "prevote"}.mp4`,
+    thumbnailOffsetMs: format === "hook" ? 1500 : 8500, // frame with everything on screen
   };
 }
 
@@ -89,6 +98,7 @@ export function planResults(q: Question, r: Result): PlannedPost {
   return {
     questionId: q.id,
     kind: "results",
+    format: "classic",
     platform: "instagram",
     channelId: CHANNELS.instagram,
     dueAt: `${date}T${POST_TIME.results}:00${etOffset(date, POST_TIME.results)}`,

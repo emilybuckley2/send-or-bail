@@ -1002,5 +1002,418 @@
    "#hikingadventures",
    "#sendorbail"
   ]
+ },
+ {
+  "id": "si-0032",
+  "date": "2026-10-27",
+  "status": "scheduled",
+  "category": "Hiking",
+  "type": "judgment",
+  "scenario": [
+   "Summit ridge. 20 mph wind, 25°F, and it just started to sleet.",
+   "Top is 0.4 miles. Your gloves are soaked."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 6517,
+   "milesToGoal": 0.4,
+   "gainFt": 300,
+   "hazards": [
+    "whiteout"
+   ],
+   "window": "sleet, 25°F",
+   "goalLabel": "Summit"
+  },
+  "realityCheck": "Wet gloves at 25 degrees in wind are a frostnip setup within the hour. The summit is 0.4 miles; your hands are the whole trip home.",
+  "headline": "Sleet. Soaked gloves. 0.4 to go.",
+  "caption": "The top is right there. So is the sleet.\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#hiking",
+   "#outdoors",
+   "#mountains",
+   "#hikingadventures",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0033",
+  "date": "2026-10-28",
+  "status": "scheduled",
+  "category": "Trail running",
+  "type": "route",
+  "scenario": [
+   "Out and back, 6 miles each way. You're at the turnaround.",
+   "A loop option adds 2 miles but you've never run it and it's 4:40pm."
+  ],
+  "choiceA": {
+   "label": "TAKE THE LOOP",
+   "keyword": "LOOP"
+  },
+  "choiceB": {
+   "label": "GO BACK",
+   "keyword": "BACK"
+  },
+  "map": {
+   "seed": 3672,
+   "milesOut": 6,
+   "milesToGoal": 8,
+   "hazards": [
+    "sunset"
+   ],
+   "window": "sunset 5:05",
+   "goalLabel": "Car"
+  },
+  "headline": "New loop. 25 minutes of daylight.",
+  "caption": "Known trail or new loop in the dark?\n\nComment LOOP or BACK.",
+  "hashtags": [
+   "#trailrunning",
+   "#outdoors",
+   "#hiking",
+   "#getoutside",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0034",
+  "date": "2026-10-29",
+  "status": "scheduled",
+  "category": "Mountain biking",
+  "type": "judgment",
+  "scenario": [
+   "Last descent of the day. Wet roots, wet rock, 2 miles of it.",
+   "Your brakes started squealing on the climb."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 5511,
+   "milesToGoal": 2,
+   "hazards": [
+    "wet_rock"
+   ],
+   "window": "brakes squealing",
+   "goalLabel": "Trailhead"
+  },
+  "headline": "Wet roots. Squealing brakes.",
+  "caption": "Roll it or walk it?\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#outdoors",
+   "#mountainbiking",
+   "#mtb",
+   "#getoutside",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0035",
+  "date": "2026-10-30",
+  "status": "scheduled",
+  "category": "Backpacking",
+  "type": "gear",
+  "scenario": [
+   "Stream crossing, ankle deep, ice on both banks.",
+   "You have waterproof boots and one pair of dry socks for 3 more days."
+  ],
+  "choiceA": {
+   "label": "BOOTS ON",
+   "keyword": "BOOTS"
+  },
+  "choiceB": {
+   "label": "BAREFOOT",
+   "keyword": "BARE"
+  },
+  "map": {
+   "seed": 7673,
+   "milesToGoal": 4,
+   "hazards": [
+    "creek"
+   ],
+   "window": "ice on banks",
+   "goalLabel": "Camp 2"
+  },
+  "headline": "Ice on the banks. One dry pair.",
+  "caption": "Trust the boots or trust your toes?\n\nComment BOOTS or BARE.",
+  "hashtags": [
+   "#backpacking",
+   "#outdoors",
+   "#hiking",
+   "#backcountry",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0036",
+  "date": "2026-10-31",
+  "status": "scheduled",
+  "category": "Hiking",
+  "type": "judgment",
+  "scenario": [
+   "It's rifle season. You hear shots across the valley, maybe half a mile off.",
+   "You're in gray and green. The car is 5 miles the other way."
+  ],
+  "choiceA": {
+   "label": "KEEP GOING",
+   "keyword": "GO"
+  },
+  "choiceB": {
+   "label": "TURN BACK",
+   "keyword": "BACK"
+  },
+  "map": {
+   "seed": 2983,
+   "milesToGoal": 5,
+   "hazards": [
+    "none"
+   ],
+   "goalLabel": "Car"
+  },
+  "realityCheck": "Hunters are usually careful, but gray and green in rifle season is on you. Blaze orange, loud voices and open ground beat hoping.",
+  "headline": "Rifle season. Gray jacket.",
+  "caption": "Shots across the valley. You're not wearing orange.\n\nComment GO or BACK.",
+  "hashtags": [
+   "#hiking",
+   "#outdoors",
+   "#backcountry",
+   "#hikingadventures",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0037",
+  "date": "2026-11-01",
+  "status": "scheduled",
+  "category": "Climbing",
+  "type": "judgment",
+  "scenario": [
+   "Multipitch, 38°F in the shade. Your fingers stopped feeling the holds a pitch ago.",
+   "Two pitches left, both in the sun. Rapping now takes an hour."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 2721,
+   "gainFt": 200,
+   "hazards": [
+    "none"
+   ],
+   "window": "38°F",
+   "goalLabel": "Top out"
+  },
+  "headline": "Numb fingers. Sun two pitches up.",
+  "caption": "Climb toward the sun or rap into the shade?\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#climbing",
+   "#outdoors",
+   "#mountains",
+   "#rockclimbing",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0038",
+  "date": "2026-11-02",
+  "status": "scheduled",
+  "category": "Navigation",
+  "type": "route",
+  "scenario": [
+   "Snow covered the trail an hour ago. No tracks ahead of you.",
+   "A drainage below looks like it leads to the road. Your map shows cliffs between."
+  ],
+  "choiceA": {
+   "label": "FOLLOW DRAINAGE",
+   "keyword": "DRAIN"
+  },
+  "choiceB": {
+   "label": "BACKTRACK",
+   "keyword": "BACK"
+  },
+  "map": {
+   "seed": 4642,
+   "milesToGoal": 3,
+   "hazards": [
+    "snowfield"
+   ],
+   "window": "fresh snow",
+   "goalLabel": "Road"
+  },
+  "realityCheck": "Drainages pull people off trail and over cliffs every winter. Your own tracks are the one route you know goes.",
+  "headline": "Snow erased the trail.",
+  "caption": "Down the drainage or back the way you came?\n\nComment DRAIN or BACK.",
+  "hashtags": [
+   "#hiking",
+   "#outdoors",
+   "#backcountry",
+   "#navigation",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0039",
+  "date": "2026-11-03",
+  "status": "scheduled",
+  "category": "Skiing",
+  "type": "judgment",
+  "scenario": [
+   "Resort opens tomorrow. Tonight the lifts are off and the ropes are up.",
+   "Fresh snow, a headlamp, and a skin track someone already set."
+  ],
+  "choiceA": {
+   "label": "SEND IT",
+   "keyword": "SEND"
+  },
+  "choiceB": {
+   "label": "BAIL",
+   "keyword": "BAIL"
+  },
+  "map": {
+   "seed": 5211,
+   "gainFt": 1200,
+   "hazards": [
+    "sunset"
+   ],
+   "window": "after dark",
+   "goalLabel": "Top station"
+  },
+  "headline": "Closed resort. Fresh snow. Headlamp.",
+  "caption": "Earn it tonight or wait for the chairs?\n\nComment SEND or BAIL.",
+  "hashtags": [
+   "#skiing",
+   "#outdoors",
+   "#mountains",
+   "#backcountryskiing",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0040",
+  "date": "2026-11-04",
+  "status": "scheduled",
+  "category": "Trail running",
+  "type": "gear",
+  "scenario": [
+   "28°F at the start, 50°F by noon. 18 mile loop.",
+   "Pack the shell and sweat, or leave it and gamble."
+  ],
+  "choiceA": {
+   "label": "PACK IT",
+   "keyword": "PACK"
+  },
+  "choiceB": {
+   "label": "LEAVE IT",
+   "keyword": "LEAVE"
+  },
+  "map": {
+   "seed": 6843,
+   "milesToGoal": 18,
+   "hazards": [
+    "heat"
+   ],
+   "window": "28°F to 50°F",
+   "goalLabel": "Finish"
+  },
+  "realityCheck": "Cold starts turn into warm finishes most days in shoulder season. The shell matters for the day the forecast is wrong, and that day doesn't announce itself.",
+  "headline": "28 at the start. 50 by noon.",
+  "caption": "Carry the shell for four hours you might not need it?\n\nComment PACK or LEAVE.",
+  "hashtags": [
+   "#trailrunning",
+   "#outdoors",
+   "#hiking",
+   "#getoutside",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0041",
+  "date": "2026-11-05",
+  "status": "scheduled",
+  "category": "Scrambling",
+  "type": "judgment",
+  "scenario": [
+   "Class 3 ridge. A thin glaze of ice on the north side of every hold.",
+   "Summit is 300 ft up. The sun hits it in 40 minutes."
+  ],
+  "choiceA": {
+   "label": "GO NOW",
+   "keyword": "NOW"
+  },
+  "choiceB": {
+   "label": "WAIT FOR SUN",
+   "keyword": "WAIT"
+  },
+  "map": {
+   "seed": 8602,
+   "gainFt": 300,
+   "hazards": [
+    "wet_rock"
+   ],
+   "window": "sun in 40 min",
+   "goalLabel": "Summit"
+  },
+  "realityCheck": "Verglas on class 3 turns a scramble into a fall. Forty minutes of waiting is cheap insurance.",
+  "headline": "Verglas. Sun in 40 minutes.",
+  "caption": "Go now on ice, or wait for the sun?\n\nComment NOW or WAIT.",
+  "hashtags": [
+   "#hiking",
+   "#outdoors",
+   "#mountains",
+   "#scrambling",
+   "#sendorbail"
+  ]
+ },
+ {
+  "id": "si-0042",
+  "date": "2026-11-06",
+  "status": "scheduled",
+  "category": "Paddling",
+  "type": "judgment",
+  "scenario": [
+   "Last river day of the year. Water is 42°F. You have a wetsuit, not a drysuit.",
+   "The rapid ahead is one you've swum before."
+  ],
+  "choiceA": {
+   "label": "RUN IT",
+   "keyword": "RUN"
+  },
+  "choiceB": {
+   "label": "PORTAGE",
+   "keyword": "PORTAGE"
+  },
+  "map": {
+   "seed": 3671,
+   "hazards": [
+    "creek"
+   ],
+   "window": "42°F water",
+   "goalLabel": "Takeout"
+  },
+  "realityCheck": "A swim in 42 degree water in a wetsuit gives you minutes of useful movement, not many. The portage trail exists for exactly this day.",
+  "headline": "42 degree water. A rapid you've swum.",
+  "caption": "Run it or walk it?\n\nComment RUN or PORTAGE.",
+  "hashtags": [
+   "#paddling",
+   "#outdoors",
+   "#kayaking",
+   "#getoutside",
+   "#sendorbail"
+  ]
  }
 ]

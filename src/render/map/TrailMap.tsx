@@ -52,7 +52,8 @@ const Pct: React.FC<{ value: number; fg: string }> = ({ value, fg }) => (
   </div>
 );
 
-export const TrailMap: React.FC<{ q: Question; box: MapBox; progress?: MapProgress; result?: MapResult }> = ({ q, box, progress = fullyDrawn, result }) => {
+export const TrailMap: React.FC<{ q: Question; box: MapBox; progress?: MapProgress; result?: MapResult; blazeScale?: [number, number] }> =
+  ({ q, box, progress = fullyDrawn, result, blazeScale = [1, 1] }) => {
   const L = useMemo(() => trailLayout(q.map.seed, box), [q.map.seed, box]);
   const lenApproach = getLength(L.approach);
   const lenA = getLength(L.branchA);
@@ -162,11 +163,11 @@ export const TrailMap: React.FC<{ q: Question; box: MapBox; progress?: MapProgre
 
       {/* fork blazes */}
       <Label x={blazeA.x} y={blazeA.y}>
-        <Blaze label={q.choiceA.label} bg={color.blaze} fg={color.paper} scale={progress.fork} />
+        <Blaze label={q.choiceA.label} bg={color.blaze} fg={color.paper} scale={progress.fork * blazeScale[0]} />
         {result && <Pct value={result.pctA} fg={color.blaze} />}
       </Label>
       <Label x={blazeB.x} y={blazeB.y}>
-        <Blaze label={q.choiceB.label} bg={color.ink} fg={color.paper} scale={progress.fork} />
+        <Blaze label={q.choiceB.label} bg={color.ink} fg={color.paper} scale={progress.fork * blazeScale[1]} />
         {result && <Pct value={result.pctB} fg={color.ink} />}
       </Label>
     </div>

@@ -28,16 +28,20 @@ async function still(id: string, q: Question, output: string) {
 }
 
 // Renders everything for one question into outDir. Returns the track used.
-export async function renderQuestion(q: Question, outDir: string, previousTrack?: string): Promise<string | undefined> {
+export type Format = "classic" | "hook";
+
+export async function renderQuestion(q: Question, outDir: string, previousTrack?: string, format: Format = "classic"): Promise<string | undefined> {
+  const compId = format === "hook" ? "Hook" : "PreVote";
+  const name = format === "hook" ? "hook" : "prevote";
   fs.mkdirSync(outDir, { recursive: true });
   const tracks = loadTracks();
   const track = tracks.length ? pickTrack(tracks, q.map.seed, q.musicTrack, previousTrack) : undefined;
   const inputProps = { q, music: track ? { file: track.file, startSec: track.startSec } : null };
   const url = await getBundle();
-  const composition = await selectComposition({ serveUrl: url, id: "PreVote", inputProps, browserExecutable });
-  const raw = path.join(outDir, "prevote_raw.mp4");
+  const composition = await selectComposition({ serveUrl: url, id: compId, inputProps, browserExecutable });
+  const raw = path.join(outDir, `${name}_raw.mp4`);
   await renderMedia({ composition, serveUrl: url, codec: "h264", audioCodec: "aac", outputLocation: raw, inputProps, browserExecutable });
-  const final = path.join(outDir, "prevote.mp4");
+  const final = path.join(outDir, `${name}.mp4`);
   if (track) {
     // Final loudness pass so every Reel lands near -14 LUFS.
     execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-i", raw, "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
@@ -45,10 +49,14 @@ export async function renderQuestion(q: Question, outDir: string, previousTrack?
   } else {
     fs.copyFileSync(raw, final);
   }
-  execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-i", raw, "-c:v", "copy", "-an", path.join(outDir, "prevote_silent.mp4")]);
+  execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-i", raw, "-c:v", "copy", "-an", path.join(outDir, `${name}_silent.mp4`)]);
   fs.rmSync(raw);
-  await still("Cover", q, path.join(outDir, "cover.png"));
-  await still("Feed", q, path.join(outDir, "feed.png"));
+  if (format === "hook") {
+    await still("HookCover", q, path.join(outDir, "hook_cover.png"));
+  } else {
+    await still("Cover", q, path.join(outDir, "cover.png"));
+    await still("Feed", q, path.join(outDir, "feed.png"));
+  }
   fs.writeFileSync(path.join(outDir, "caption.txt"), q.caption + "\n");
   if (q.realityCheck) fs.writeFileSync(path.join(outDir, "first_comment.txt"), q.realityCheck + "\n");
   return track?.id;

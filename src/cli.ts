@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import { Question } from "./schema";
 import { lintQuestion } from "./lint/text";
-import { renderQuestion, renderResults } from "./render/run";
+import { renderQuestion, renderResults, type Format } from "./render/run";
 import { Result } from "./schema";
 import { parseComments, tally } from "./tally/tally";
 import { PLATFORMS, nextDay, planPrevote, planResults } from "./schedule/plan";
@@ -13,7 +13,8 @@ function load(): Question[] {
   return Question.array().parse(JSON.parse(fs.readFileSync(QUESTIONS, "utf8")));
 }
 
-async function render(target: string) {
+// render <ids|week1> [classic|hook]
+async function render(target: string, format: Format = "classic") {
   const all = load();
   const ids = target === "week1" ? WEEK_ONE : target.split(",");
   let previous: string | undefined;
@@ -24,19 +25,19 @@ async function render(target: string) {
     if (errors.length) throw new Error(errors.join("\n"));
     const dir = `out/${q.date ?? q.id}`;
     const t0 = Date.now();
-    previous = await renderQuestion(q, dir, previous);
+    previous = await renderQuestion(q, dir, previous, format);
     console.log(`${id} -> ${dir} (music: ${previous ?? "none"}, ${((Date.now() - t0) / 1000).toFixed(0)}s)`);
   }
 }
 
 // Writes the Buffer payloads for every scheduled question from a start date; a Claude
 // session posts them through the Buffer connector.
-// schedule <from> [to] [platforms]   e.g. schedule 2026-10-07 2026-10-26 tiktok,youtube
-function schedule(from: string, to = "9999-12-31", platforms = PLATFORMS) {
+// schedule <from> [to] [platforms] [classic|hook]   e.g. schedule 2026-10-27 2026-11-06 tiktok hook
+function schedule(from: string, to = "9999-12-31", platforms = PLATFORMS, format: Format = "classic") {
   const posts = load()
     .filter((q) => q.status === "scheduled" && q.date && q.date >= from && q.date <= to)
     .sort((a, b) => a.date!.localeCompare(b.date!))
-    .flatMap((q) => platforms.map((p) => planPrevote(q, p)));
+    .flatMap((q) => platforms.map((p) => planPrevote(q, p, format)));
   fs.mkdirSync("out/schedule", { recursive: true });
   const file = `out/schedule/${from}.json`;
   fs.writeFileSync(file, JSON.stringify(posts, null, 2) + "\n");
@@ -45,7 +46,7 @@ function schedule(from: string, to = "9999-12-31", platforms = PLATFORMS) {
 
 // plan-batch <candidates.json>: validates new scenarios, assigns ids and consecutive dates after the
 // last scheduled one, appends them to questions.json as scheduled, renders them, stages media/<date>/.
-async function planBatch(file: string) {
+async function planBatch(file: string, format: Format = "classic") {
   const all = load();
   const raw = JSON.parse(fs.readFileSync(file, "utf8")) as Partial<Question>[];
   if (raw.length < 1 || raw.length > 40) throw new Error(`need 1 to 40 candidates, got ${raw.length}`);
@@ -66,9 +67,10 @@ async function planBatch(file: string) {
   console.log(`added ${added.map((q) => `${q.id} (${q.date})`).join(", ")}`);
   let previous: string | undefined;
   for (const q of added) {
-    previous = await renderQuestion(q, `out/${q.date}`, previous);
+    previous = await renderQuestion(q, `out/${q.date}`, previous, format);
     fs.mkdirSync(`media/${q.date}`, { recursive: true });
-    for (const f of ["prevote.mp4", "cover.png"]) fs.copyFileSync(`out/${q.date}/${f}`, `media/${q.date}/${f}`);
+    const files = format === "hook" ? ["hook.mp4", "hook_cover.png"] : ["prevote.mp4", "cover.png"];
+    for (const f of files) fs.copyFileSync(`out/${q.date}/${f}`, `media/${q.date}/${f}`);
     console.log(`${q.id} rendered -> media/${q.date}`);
   }
 }
@@ -121,10 +123,10 @@ async function runRenderResults(id: string) {
 
 const [cmd, arg, ...rest] = process.argv.slice(2);
 const commands: Record<string, () => Promise<void>> = {
-  render: () => render(arg ?? "week1"),
+  render: () => render(arg ?? "week1", (rest[0] as Format) ?? "classic"),
   schedule: async () => schedule(arg ?? new Date().toISOString().slice(0, 10), rest[0],
-    rest[1] ? (rest[1].split(",") as typeof PLATFORMS) : undefined),
-  "plan-batch": () => planBatch(arg),
+    rest[1] ? (rest[1].split(",") as typeof PLATFORMS) : undefined, (rest[2] as Format) ?? "classic"),
+  "plan-batch": () => planBatch(arg, (rest[0] as Format) ?? "classic"),
   tally: async () => runTally(arg, rest),
   "render-results": () => runRenderResults(arg),
 };
